@@ -4,8 +4,8 @@
 13.5        Echelle           Reference scale, i.e. size of elementary screw vectors in BVD.XXX (Burgers vector unit)
 
 T           Shear             True : shear stress resolved on the slip system with highest Schmid factor; False = uniaxial stress
-50.0         Sigma0            Initial stress (MPa)
-0.2D-9      deltat0           Elementary time step (s)
+40.0         Sigma0            Initial stress (MPa)
+0.125D-11      deltat0           Elementary time step (s)
 1D-6          SigmaPoint        Elementary stress increments (MPa s-1)      (mode_deformation=3,6,7)
 0.         EpsilonPoint      Imposed strain rate (s-1)                   (mode_deformation=0,5,6,7,9)
 1.5         RAID              Apparent Young modulus                      (mode_deformation=0,5,6,7)
