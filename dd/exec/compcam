@@ -1,0 +1,16 @@
+#! /bin/bash
+# compilation et lancement du programme camera
+
+if ! cd ../bin ; then  echo -e "\a\n\n Impossible d'ouvrire ../bin " ; exit ; fi
+
+echo -e "\n\n Effacement de l ancien executable Camera  ........................... \n" 
+rm -f cam
+
+echo -e "\n\n Lancement de la compilation de CAMERA  ........................... \n" 
+make cam
+
+echo -e "\n\n Lancement de Camera ...............................................\n" 
+cam
+
+
+

@@ -1,0 +1,173 @@
+*** Fichier de configuration de l'affichage ********************************************************
+* Mode 0->segments 1->systemes 2->1_couleur_mais_jonction_et_gd_different 3->1_couleur
+1
+* Quadrillage => 1,3,5,7,9... et 0 : mode jonctions
+1
+* Couleur de fond puis de trace de la boite : Un entier pour l'écran, 3 réels pour Postscript (RGB)
+65535
+0.0
+0.0
+0.0
+1
+0.5
+0.5
+0.5
+* Couleur des jonctions puis gd
+2550
+1.0
+0.0
+0.0
+255
+1.0
+1.0
+1.0
+* Nb de type de segments ou systemes, couleur a l'ecran et postscript et enfin affichage o/n
+12
+63750
+0.0
+1.0
+0.0
+1
+17850
+0.0
+0.0
+1.0
+1
+255
+1.0
+1.0
+0.0
+1
+7650
+0.0
+1.0
+1.0
+1
+65000
+1.0
+0.0
+1.0
+1
+58650
+0.5
+0.0
+0.0
+1
+10200
+0.0
+0.5
+0.0
+1
+15300
+0.0
+0.0
+0.5
+1
+22950
+0.5
+0.5
+0.0
+1
+8925
+0.0
+0.5
+0.5
+1
+45900
+0.5
+0.0
+0.5
+1
+57375
+0.2
+0.0
+0.2
+1
+
+Fichier de configuration des couleurs sur les DEC
+Mode 0 : couleur par Ibvr (1-8);1: coul par sys.;2:coul pour jonc et dev;3:1 couleur
+1
+Couleur de fond puis de trace de la boite
+65535
+1
+Couleurs des systemes ou caracteres
+63750     bleu
+17850     terre
+255       rouge
+7650      vert
+65000     blue clair
+10200     fluo
+15300     vert fonce
+22950     bleu fonce marrin 7650      vert
+8925      marron clair
+45900     blue gris
+57375     nahdi fonce
+57375     nahdi fonce
+Systeme ou carateres actif ?
+1
+1
+1 
+1 
+1 
+1 
+1 
+1 
+1
+1
+1
+1
+Couleur de %jonc et %gd
+2550      marron 
+255
+Quadrillage => 1,3,5,7,9... et 0 : mode jonctions
+1
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+
+
+Mode :
+0 : distingue les caractere (vis meme couleur de tous les systemes)
+1 : couleur patr sysem de glissement
+2 : une couleur piour tous les seg, mais couleur differentes pour les jonction et encree et glissement 
+
+3 : une couleur pour touts le mode
+4 : equivalent au mode 0
+
+
+les indice >>> vers blanc, et <<<  noir
+system actif
+0 le system n'apparait pas
+
+0
+Couleur de fond puis de trace de la boite
+65535     blanc
+1         noir
+Couleurs des systemes ou caracteres
+63750     bleu
+255       rouge
+7650      vert
+15300     vert fonce
+17850     terre
+10200     fluo
+22950     bleu fonce marrin
+45900     blue gris
+58650     nahdi clair
+57375     nahdi fonce
+2550      marron 
+8925      marron clair
+
+
+
+63750
+255
+7650
+15300
+17850
+10200
+22950
+45900
+58650
+57375
+2550
+8925

@@ -1,0 +1,14 @@
+## A plane here is defined by three points (x,y,z). OP1, OP2 form a basis for the plane
+#1
+Origin  0       0         0
+Point1  0       5000      0
+Point2  0       0         5000
+#2
+Origin  0       0         0
+Point1  0       5000      0
+Point2  0       0         5000
+#3
+Origin  0       0         0
+Point1  0       5000      0
+Point2  0       0         5000
+[eof]

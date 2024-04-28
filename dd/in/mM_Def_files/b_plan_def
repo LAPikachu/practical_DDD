@@ -1,0 +1,80 @@
+Input file for the simulations working with planes boundaries
+
+> Reading start after the following line
+###########################################################
+100                  !  longminseg
+6                    !  nbplanDom
+T                    !  InclExcl
+0                    !  NbPlanMax
+0                    !  NbFreePlan
+1 0 0     2724.      !  varplan     posplan
+-1 0 0    -908.
+0 1 0     3012.
+0 -1 0   -1004.
+0 0 1     3012.
+0 0 -1   -1204.
+
+
+
+###########################################################
+> End of the reading for mM, info and examples are following
+
+******ALL PLANES MUST BE DEFINED WITH THE NORMAL VECTOR (MILLER INDEX) POINTING OUTSIDE THE VOLUME**********
+
+line 1 = the variable named longminseg gives the minimum lenght to discretize segments stopped
+         on barriers (minimum lenght->modur/longminseg)
+line 2 = the total number of planes defining the closed domaine of simulation (e.g. a cubic doamine =6)
+         Notice that "0" means that any closed domaine is defined.
+line 3 = T means that the intial dislocations must be outside the close area defined above
+         F means that the intial dislocations must be inside the close area defined above
+line 4 = Additional number of planes with respect to line 2 for independent internal barriers
+line 5 = Additional number of free surface plane. The normal vector is pointing in the free space direction
+
+from line 5 = each normal planes vector (e.g. 0 0 1) and the shifting amplitude D such that Ax + By + Cz = D
+
+******* The following examples are made assuming a simulated volume of shape  3632 4016 4816
+        One must take care of periodic boundary condition which is the default boundary condition in mM
+
+example (1) a periodic bicrystal
+100                  !  longminseg
+0                    !  nbplanDom
+F                    !  InclExcl
+1                    !  NbPlanMax
+0                    !  NbFreePlan
+1 0 0      1816      !  varplan     posplan
+
+example (2) a periodic lattice of cubes free of dislocations in the simulated volume
+In this case, any dislocation line in the initial configuration must enter the dislocation free zone
+100                  !  longminseg
+6                    !  nbplanDom
+T                    !  InclExcl
+0                    !  NbPlanMax
+0                    !  NbFreePlan
+1 0 0     2724.      !  varplan     posplan
+-1 0 0    -908.
+0 1 0     3012.
+0 -1 0   -1004.
+0 0 1     3012.
+0 0 -1   -1204.
+
+example (3) An isolate cubic grain in the simulated volume
+100                  !  longminseg
+0                    !  nbplanDom
+F                    !  InclExcl
+6                    !  NbPlanMax
+0                    !  NbFreePlan
+1 0 0     2708.      !  varplan     posplan
+-1 0 0    -924.
+0 1 0     2996.
+0 -1 0   -1020.
+0 0 1     3596.
+0 0 -1   -1220.
+
+example (4) a thin film made with a bottom interface and a top free surface
+100                  !  longminseg
+0                    !  nbplanDom
+F                    !  InclExcl
+1                    !  NbPlanMax
+1                    !  NbFreePlan
+-1 0 0      -8       !  varplan     posplan
+ 1 0 0    1808.

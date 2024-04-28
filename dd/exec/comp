@@ -1,0 +1,29 @@
+
+
+if ! cd ../bin ; then  echo -e "\a\n\n Impossible d'ouvrire ../bin " ; exit ; fi
+rm -rf core.*
+rm -rf ../in/core.*
+rm -rf ../out/core.*
+echo -e "\n Supression de l'ancien listing dans ../src/simu  ........................... \n" 
+
+rm -f ../src/simu/micromegas.f90
+
+echo -e "\n Effacement de l ancien executable MicroMegas  ........................... \n" 
+rm -f mm
+
+echo -e "\n Lancement de la compilation de MicroMegas  ........................... \n" 
+make mm
+
+echo -e "\n Concatenation des fichier sources *.f90 dans micromegas.f90  ........................... \n" 
+if ! cd ../src/simu ; then  echo -e "\a\n\n Impossible d'ouvrire ../src/simu " ; exit ; fi
+cat 01constantes.f90 02bricamat.f90 03varbase.f90 04varglob.F90 carto.f90 06debug.f90 07init.F90 \
+    08connec.f90 microstructure.F90  09elasti.F90 10dynam.F90 11topolo.f90 12contact.f90 13resul.F90 \
+    14bigsave.F90 15main.F90 > mM.F90
+
+if ! cd ../../bin ; then  echo -e "\a\n\n Impossible d'ouvrire ../../bin " ; exit ; fi
+
+echo -e "\n\n Lancement de MicroMegas ...........................\n" 
+./mm
+
+
+

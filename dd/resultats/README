@@ -1,0 +1,5 @@
+This directory is where some transformation of the simulation output data can be proceeded.
+You should never manipulate the output files of the simulation directly in the "out" directory.
+
+So, if you write a script to manipulate data of mM, make shure that you first copy your data here and 
+then do what you want ;)

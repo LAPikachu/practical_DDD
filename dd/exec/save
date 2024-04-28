@@ -1,0 +1,63 @@
+#! /usr/local/bin/bash
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathgtemp="$pathdd/gtemp"
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/Graphics.DEC"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+####         Explication
+###  ce script lit le nom d'un repertoir "manipsauv"
+### il verifie : si le repertoire existe deja dans dd/manip il relie le nom
+### si le repertoire n'existe pas alors il le cree
+### ensuite il copie les trois fichiers input de la simulation (dans dd/in) 
+### et il les met dans la directorie dd/out
+### Ensuite il copie tous les fichiers de la directorie dd/out dans le
+### repertoire  de sauvegarde "manipsauv"
+###
+
+#creation du repertoire de sauvegarde
+echo -en "\n Nom du nouveau Repertoir pour la sauvgarde dans $manip :   " ; read rep
+manipsauv=$manip/$rep
+
+while [ -d $manipsauv ] ; do
+  echo -e "\n Ca va pas ? $manipsauv existe deja. CHANGER LE NOM ....\n"
+  echo -en "\n\n LE REPERTOIR DE RESULTATS : " ; read rep 
+
+  manipsauv=$manip/$rep
+done
+
+if ! cd $manip ; then  echo -e "\a\n\n Impossible d'acceder a $manip " ; exit ; fi
+if ! mkdir $rep ; then  echo -e "\a\n\n Impossible de creer $manipsauv " ; exit ; fi
+
+# on va dans ce repertoire
+if ! cd $manipsauv ; then  echo -e "\a\n\n Impossible d'ouvrire $manipsauv " ; exit ; fi
+
+# on recopie les fichiers input utils
+echo -e "\n\n Liste des fichiers input de cette simulation ........."
+echo -e "\n\n affichage du fichier inputfile.dd"
+more ../../in/input.dd
+if ! cp ../../in/input.dd ../../out/input.dd ; then  echo -e "\a\n Impossible de recopier input.dd" ; exit ; fi
+
+echo -en "\n Nom du fichier materiau de la manipe :   " ; read fich
+if ! cp ../../in/$fich ../../out/$fich ; then  echo -e "\a\n Impossible de recopier ce fichier" ; exit ; fi
+
+echo -en "\n Nom du fichier control de la manipe :   " ; read fich
+if ! cp ../../in/$fich ../../out/$fich ; then  echo -e "\a\n Impossible de recopier ce fichier" ; exit ; fi
+
+echo -en "\n Nom du fichier segments de la manipe :   " ; read fich
+if ! cp ../../in/$fich ../../out/$fich ; then  echo -e "\a\n Impossible de recopier ce fichier" ; exit ; fi
+
+# on recopie les fichiers de output
+echo -e "\n\n Copie des fichiers output ........."
+if ! cp -r ../../out/* ./ ; then  echo -e "\a\n Impossible de copier les fichiers output" ; exit ; fi
+
+# compression des fichiers
+gzip -rv $manipsauv
+
+echo -e "\n\n Operation reussie, Bravo ........."

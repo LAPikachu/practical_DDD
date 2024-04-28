@@ -1,0 +1,3 @@
+f90 -o DConf taus88.f90 DConf.f90
+rm *.mod
+

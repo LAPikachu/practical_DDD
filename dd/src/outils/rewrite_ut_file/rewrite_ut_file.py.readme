@@ -1,0 +1,26 @@
+rewrite_ut_file.py
+
+Purpose:
+--------
+Allows to rewrite times in .ut files with a certain number of decimals
+
+Use :
+-----
+You must provide the full name of the ut file as an argument
+
+' python rewrite_ut_file.py filename.ut '
+
+Reason:
+------
+It may append that Zset writes the ut files as follows, depending on how your outputs have been set :
+
+**element
+1 1 1 100 4.999999999999993e-09
+2 1 1 200 9.999999999999997e-09
+
+..and it causes problems of synchronisation with mM while making movies with paraview
+This script round the time step to the correct value :
+
+**element
+1 1 1 100 5.00000e-09
+2 1 1 200 1.00000e-08

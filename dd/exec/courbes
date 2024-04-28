@@ -1,0 +1,80 @@
+#! /usr/local/bin/bash
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathgtemp="$pathdd/gtemp"
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/GraphicsDec"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export pathin="$pathdd/in"
+
+####         Explication
+### ce script  copie tous les fichiers *.ctl1 
+### dans le repertoire dd/src/outils, qui doit contenir entre autres
+### les fichiers tracer.ctl1 qui genere l'interface graphique et qui
+### fait appel aus sous-scripts (GamaSys.....,etc) interactivement ...
+###   tracer.ctl1 fait appel egalmenet au suite.ctl1 qui imprime les 
+### courbes interactivement. 
+### le fichier fin.ctl1 ne contient que la ligne "pause -1" qui ne doit pas exister 
+### dans les fichier ctl1 servant pour l'impression
+
+echo -en "\n Repertoir des resultats sauvgardes dans dd :   " ; read rep
+
+manipsauv=$pathdd/$rep
+while ! [ -d $manipsauv ] ; do
+  echo -e "\n Ca va pas ? $manipsauv n'existe pas ....\n"
+  echo -en "\n\n LE REPERTOIR DE RESULTATS : " ; read rep 
+		manipsauv=$pathdd/$rep
+done
+
+if ! cd $pathdd/resultats ; then  echo -e "\a\n\n Impossible d'ouvrire $pathdd/resultats " ; exit ; fi
+
+##----------------------------------------------------------------
+## DupOutFiles
+
+		echo -en "\n\n Patientez : elimination des anciens fichiers.................. \n\n "
+		rm -f *
+		echo -en "\n\n Patientez : copie des fichiers dans $manip  ........ \n\n "
+		cp $manipsauv/travapp travapp2
+		cp $manipsauv/travint travint2
+		cp $manipsauv/gamma gamma2
+		cp $manipsauv/gammap gammap2
+		cp $manipsauv/rau rau2
+		cp $manipsauv/sigeps sigeps2
+		cp $manipsauv/stat stat2
+		cp $manipsauv/sigint sigint2
+
+		echo -en "\n\n Patientez : copie des fichiers *.ctl1   .................... \n\n "
+		if ! cp $pathdd/src/outils/*.ctl1 ./ ; then 
+		echo -en "\a impossible de copier les fichier ctl1" ; exit ; fi
+
+		chmod +x suite.ctl1
+		cat   AlphaAfact.ctl1 fin.ctl1 > AlphaAfact.ctl2
+		cat   Epstime.ctl1 fin.ctl1 > Epstime.ctl2
+		cat   airevcm.ctl1 fin.ctl1 > airevcm.ctl2
+		cat   airevis.ctl1 fin.ctl1 > airevis.ctl2
+		cat   airecoin.ctl1 fin.ctl1 > airecoin.ctl2
+		cat   GamaSys.ctl1 fin.ctl1 > GamaSys.ctl2
+		cat   GamaSysP.ctl1 fin.ctl1 > GamaSysP.ctl2
+		cat   RoEps.ctl1 fin.ctl1 > RoEps.ctl2 
+		cat   RoSys.ctl1 fin.ctl1 > RoSys.ctl2 
+		cat   SigEps.ctl1 fin.ctl1 > SigEps.ctl2
+		cat   SigRro.ctl1 fin.ctl1 > SigRro.ctl2
+		cat   Sigtime.ctl1 fin.ctl1 > Sigtime.ctl2
+		cat   Teps.ctl1 fin.ctl1 > Teps.ctl2
+		cat   TsigInt.ctl1 fin.ctl1 > TsigInt.ctl2
+		cat   trappsys.ctl1 fin.ctl1 > trappsys.ctl2
+		cat   trintsys.ctl1 fin.ctl1 > trintsys.ctl2
+		cat   epspoit.ctl1 fin.ctl1 > epspoit.ctl2
+
+## et le fichier d'impression
+		cat *.ctl1 > tt.imptot
+
+##---------------------------------------------------------------
+
+echo -en " \n Script Tcl-Tk"
+
+wish -f tracer.ctl1
+

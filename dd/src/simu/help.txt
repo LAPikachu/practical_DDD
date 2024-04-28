@@ -1,0 +1,6 @@
+The microMegas simulation project is made up of many Fortran 95 modules.
+Each module is supposed to contain a specific part of the simulation.
+
+We give up a systematic translation of the sources comments, but since
+September 2004, all modifications made to mM have been made by using English as reference
+language :)

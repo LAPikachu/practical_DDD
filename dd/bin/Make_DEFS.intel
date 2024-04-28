@@ -1,0 +1,22 @@
+#######################################################################################
+# Header for the computers platforms                                                  #
+#                                                                                     #
+#  -->  Intel   Intel   Intel   Intel   Intel   Intel   Intel                         #
+#                                                                                     #
+#######################################################################################
+
+CC=icc -m64
+FC=ifort -m64
+MPIFC=/usr/local/intel/cluster_studio/2012_0_032/impi/4.0.3.008/bin64/mpiifort -m64
+
+OMP= -openmp
+
+MODULEOPT=-module 
+
+CFLAGS= -O3 -mkl -no-prec-div -parallel -opt-prefetch -L/usr/lib64
+FFLAGS= -fast -mkl -no-prec-div -opt-prefetch -L/usr/lib64
+#FFLAGS= -fast -u -ftrapuv -CB -mkl -no-prec-div -opt-prefetch -L/usr/lib64
+
+CGRAPHLIB  = -lX11 -lcxaguard -lifcore -lifcoremt -lifport -limf
+COLORSFILE = BlackBG_mac
+MKL_LIBS   = $(BLAS)

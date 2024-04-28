@@ -1,0 +1,66 @@
+1               Nb_phase                : Number of phases to consider in the material
+
+1               Index_phase             : Index of the first phase
+
+51.57           ModuleG0                : G(0)=Shear modulus (GPa) at T = 0 K
+0.0             dmusurdT                : rate of the Shear modulus temperature dependency
+0.27D0          DPOISS                  : Poisson modulus
+
+30.D6           TAUIII                  : stress defining the begining of stage III (GD) in Pa
+0.9             BETA                    : 1st cross-slip parameter - pre-exp term (GD)
+1.              ALPHA                   : 2d cross-slip parameter - Ratio TauG TauD (GD)
+
+CFC             crystal_structure       : Cristallographic symetry of the material (VARMVT)[2]
+1               Nb_slip_types           : Number of slip system family (VARMVT)
+
+3.8410          VecBurgers              : Norme of the Burgers vector (en Angstrom)
+-1 -1 -1        Slip%planes             : ireference glide plane
+-1 0 1          Slip%directions         : reference gliding direction
+12              Slip%Nsystemes          : number of slip systems (all of the same crystallographic type)
+2 2 2 2         Numero_loi_brute        : velocitu law applied to the vis,mixte1,edge,mixte2 dislocation caractere
+
+2               NLV                     : Number of velocity law to consider
+
+1               Nloi                    : velocity law index
+0               Slip%Arrhenius          : clef : /=0 thermally activated, 0 = athermal
+1.D-4           Slip%Coef_visqueux      : viscous friction coeficient
+0.              Slip%Max_friction       : dry friction coeficient (Peierls) in MPa
+
+2               Nloi                    : velocity law index
+0               Slip%Arrhenius          : clef : /=0 thermally activated, 0 = athermal
+5.5D-5          Slip%Coef_visqueux      : viscous friction coeficient
+0.5             Slip%Max_friction       : dry friction coeficient (Peierls) in MPa
+
+
+
+
+
+######################################################################################################
+Velocity law examples
+
+-Please notice that a simulation can use simultaneously friction law, for different slip systems or even different line characters
+-The law with index 1 is a special one and must not be used during the simulations. It is the one used during the initial
+configuration relaxation step (when needed or defined in the control input file, see relax_TL, relax_INT, relax_reac).
+
+Example of viscous law list of parameters:
+
+2               Nloi                    : velocity law index
+0               Slip%Arrhenius          : velocity law type : /=0 thermally activated, 0 = athermal
+5.5D-5          Slip%Coef_visqueux      : viscous friction coefficient
+0.5             Slip%Max_friction       : dry friction stress (Peierls stress) in MPa
+
+
+Example of viscous law list of parameters:
+
+2               Nloi                    : velocity law index
+2               Slip % Arrhenius        : velocity law type : /=0 thermally activated, 0 = athermal
+1.56E11         Slip % h                : Attack frequency for thermally activated laws (s-1)
+0.84            Slip % deltaG0          : Total activation energy at T = 0 K (eV)
+8.3             Slip % friction         : Stress at the athermal plateau (MPa)
+363.            Slip % tau0             : Critical stress at T = 0 K (MPa)
+0.5             Slip % coef_p           : p exponent in Kocks fit for the activation energy
+1.              Slip % coef_q           : p exponent in Kocks fit for the activation energy
+
+3               Nloi                    : velocity law index
+1               Slip % Arrhenius        : velocity law type : /=0 thermally activated, 0 = athermal
+10000.          Slip % K                : Ratio between poorly mobile segments (here law index 2) and fast segments (here law index 3)

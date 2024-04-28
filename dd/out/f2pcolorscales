@@ -1,0 +1,29 @@
+View settings in paraview.
+
+1) import film.iseg
+
+2) to add color scale to visualize dislocation belonging to different slip systems (this step is needed only the first time you use paraview)
+
+   Edit color map --> Color Scale --> Choose Preset --> Import
+   Import both out/slipsys.xml and out/junctions.xml
+
+3) Choose slipsys.xml or junctions.xml if you want to visualize dislocations belonging to different slip systems or junctions rispectively
+
+4) Set the scale range from 1 to 20.
+
+5) Check "use discrete color" and set the value to 20.
+
+
+
+###########
+
+-slipsys.xml ---> the color scheme matches exactly slip system order in BVD.* files
+
+-junctions.xml ---> !!!Valid only for FCC materials!!!
+               --->  14) edge Lomer-Cotrell lock
+               --->  15) 60 degree Lomer-Cotrell lock
+               --->  16) edge glissile
+               --->  17) 60 degree glissile
+               --->  18) Hirth lock
+               --->  19) Collinear junction
+               --->  20) GD segments

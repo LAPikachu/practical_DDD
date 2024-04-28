@@ -1,0 +1,58 @@
+/**
+  \defgroup Bricamat Mathematical toolbox
+  This module does not have a brief description yet
+
+  \defgroup Scal_calc Scalar calculus
+  \ingroup Bricamat
+  This module includes all the functions, subroutines related to scalar calculus
+
+  \defgroup Vect_calc Vector calculus
+  \ingroup Bricamat
+  This module includes all the functions, subroutines related to vector calculus
+
+  \defgroup Tens_calc Tensor calculus
+  \ingroup Bricamat
+  This module includes all the functions, subroutines related to tensor calculus
+*/
+
+/**
+ \defgroup particles The particles mode
+ The simulation mode with spherical particles blocking dislocation dynamics
+ This module does not have a description yet
+ */
+
+/**
+ \defgroup creep The creep mode
+ \ingroup particles
+ This module of mM was initially developed by B. Devincre and A. Benzerga during the latter stay at the Onera in 2012.
+ They proposed to account for particles bypassing with dislocation climb using a phenomenological procedure.
+ Dislocations blocked against particles are supposed to shear such obstacles during a "timebreak"
+ event if the blocked dislocations have been immobilized long enough to bypass the particle with climb.
+ In this phenomenological description of plastic relaxation with climb, the dislocation line stay in their glide plane.
+ The present procedure does not differentiate segment blocked outside the particle and the one inside a particle.
+
+ The model requires:
+ - a climb velocity equation taken from \cite Bako:2011fk
+ - a calculation of the climb force (from the P-K force calculation)
+ - a list of dislocation segments blocked by particles
+ - an identification of the blocked segment glide plane
+ - a strain rate criteria to decide when dislocation glide is to slow and must be assisted by climb
+ - a procedure to identify the first blocked segment which can bypass a particle with climb.
+ - a list of glide planes containing segments free to cut particle with the climb process
+ - A file monitoring all the climb event and the corresponding time increment.
+
+ The most important variables used in the creep mode are:
+ - 'creep' is the switch variable to activate climb procedure in mM
+ - 'timebreak' is the switch variable put to yes when plastic strain with glide is to slow and a climb 'timebreak' event is requested
+ - 'epsilonpoint' is the strain rate reference value used to switch from glide to climb mode
+ - 'nstatcontrol' is the number of steps used to calculate the strain rate and the minimum delay between climb 'timebreak' events
+ - 'npar_touch' is the number of dislocation glide segments touching a particles before the cutting process.
+ - 'npar_cut' is the number of dislocation glide planes with segments in particle cutting process.
+ - 'par_touch(:,:)' is a list to keep information on particle planes where segments are stopped.
+ - 'par_cut(:,:)' is a list to keep information on particle planes where segment are in cutting process
+*/
+
+/**
+ \defgroup DCM Discrete Continuous Model
+ This module includes all the functions, subroutines specifically related DCM
+*/

@@ -1,0 +1,77 @@
+-7 5 -7	  doit etre egal a Slip % planes	lu dans MATERIAU
+-1 0 1		doit etre egal a Slip % directions	lu dans MATERIAU	
+3       doit etre egal a Slip % Nsystemes	lu dans MATERIAU
+
+1 0 0 
+0 1 0    1 :  (-1 -1  0 ) [ 1 -1  1 ]. Dep. : [-1  1  2 ]
+0 0 1
+
+0 0 -1 
+0 -1 0    97 :  ( 0  1  1 ) [-1  1 -1 ]. Dep. : [-2 -1  1 ]
+-1 0 0
+
+0 0 1 
+1 0 0    65 :  ( 0 -1 -1 ) [ 1  1 -1 ]. Dep. : [ 2 -1  1 ]
+0 1 0
+
+        -----------------------------------------------------
+  
+	                 Plan		     Burgers	Coin [1]
+
+
+!***************************************************************
+!*** Ce fichier contient la matrice de rotations pour le CFC ***
+!***************************************************************
+
+
+[1] : significations :
+
+	Matrices de rotations : matrices necessaires pour generer les
+	autres systemes de glissement a partir du systeme de reference indique dans 
+	le fichier materiau. 
+  
+   ces matrices correspont a une structure CS 
+
+
+
+
+
+ Plan : plan genere par la matrice a partir du plan de reference (-1 0 0)
+	
+	Burgers : vecteur genere a partir du vecteur de reference [0 1 0] 
+		  
+	Attention il n'est pas toujours egal au anciennes vis du vieux fichier vectim_pm
+	
+  	Coin : vecteur linge de la dislocation coin genere par le produit 
+               vecteuriel coin = vis x Plan
+				 
+	Attention : la regle (l,b,n,l....) est respectee, c-a-d la normale
+		    au plan calculee correspond bien au demi plan pour les coins   
+
+	Attention CONVENTION : si le plan de refernce est entrant (dans le tetraedre 
+                               de Thompson, tous les plans generes seront entrant et vis versa).
+
+Les vecteurs a generer avec les plans respectifs :
+
+     -2    0    2         
+      2   -4    2         -1 -1 -1      d
+      2    4    2         1 -1 1        a
+      0    2    2         
+     -4    2   -2         1 1 -1        c
+      4    2   -2         1 -1 1        a
+     -2    2    0         
+     -2   -2    4         -1 -1 -1      d
+     -2   -2   -4         1 1 -1        c
+      2    2    0         
+      2   -2   -4         1 -1 1        a
+      2   -2    4         -1 1 1        b
+      0    2   -2         
+     -4    2    2         -1 -1 -1      d
+      4    2    2         -1 1 1        b
+      2    0    2         
+     -2    4    2         1 1 -1        c
+     -2   -4    2         -1 1 1        b
+
+
+
+Ghiath Mohamed, 11/01/01 ****************************************************** 

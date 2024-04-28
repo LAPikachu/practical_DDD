@@ -1,0 +1,100 @@
+/**
+\mainpage Micromegas Manual
+ \brief Welcome
+ \todo Update content and style
+\section intro Introduction
+'mM' is an open source program for DD (Dislocation Dynamics) simulations originally developed at the 'Laboratoire d'Etude des Microstructures', CNRS-ONERA, France. This site is provided for the convenience of mM users and developers. mM is a free software under the terms of the GNU General Public License as published by the Free Software Foundation.\n\n
+
+http://www.gnu.org/philosophy/free-sw.html \n\n
+
+In order to ensure continuing availability of source codes and documentation most programs and documents on this site are subject to copyright. Appropriate copyrights and licenses appear with the relevant sources and documents. Such copyrights do not prevent you from using the simulation codes, copying and modifying them, but prevents the creation of "closed source" versions out of the open source versions.\n\n
+
+When a scientific tool exists as a software, access to source code is an important element in achieving full understanding of how that tool works. As our field evolves and improved versions of the softwares are required, access to sources allows adapting the tools quickly and efficiently.\n\n
+
+If you are a software developer and wish to incorporate what you find here into a new code, or duplicate pieces and bits for using them in another context, the situation becomes more complex. Please read the copyrights and notices carefully; you will find that they are "infectious". <b> Whatever you make from our Open Source code must itself be offered as an Open Source code. </b> In addition, in order to allow users to understand what has changed and to ensure orderly development, you have to describe all modifications you made.\n\n
+
+There is still a lot to be done before this site is fully functional. Many links and features need to be added. With your help, with your comments, suggestions and corrections, and with contributions of new Open Source mM code and documentation, this site will hopefully evolve into an increasingly useful tool for our community.\n\n
+
+
+ Source code can be obatined from http://zig.onera.fr/mm_home_page/doc/Releases.html
+  \author Benoit Devincre
+  
+  \subpage copy
+*/
+
+/*
+ \section inp Input Variables
+ - \subpage ioVars "I/O Variables (Link example) "
+ - \subpage control "Program Flow Control Variables"
+ \section format Format specifiers
+ - \subpage atoms "Atoms"
+ - \subpage species "Atomic Species Data"
+ - \subpage basis "Basis Set"
+ - \subpage delta "Multipoles parameters(Delta Block)"
+ \section tb Tight Binding Parameters
+ \subpage codeit " Coding Style Document (e.g. Convention that has be made for coding in Micromegas) "
+*/
+
+/* 
+ \page ioVars I/O Variables
+ \latexonly
+ \begin{tabular}{|c||p{0.2\textwidth}|c||p{0.25\textwidth}|}
+\hline
+ \textbf{VarName} & \textbf{Values} & \textbf{Default Value} & \textbf{Description} \\\
+\hline \hline
+ DebugFile & string & input file name.dbg & Name of the debug file \\\
+ \hline
+ OutputFile & string & input file name.out & Name of the output file \\\
+\hline
+ OnScreen & logical & .false. & on/off Printing on the screen, on means that nothing will be written in the output file\\\
+\hline
+ DebugLevel & 5,15,25 & 5 & debug information level (low, medium,high) \\\
+\hline
+ OutputLevel & 5,15,25 & 5 & output information level (low, medium,high) \\\
+ \hline
+ AniFile & string & animation file name.xyz & Name of the animation file \\\
+\hline
+ \end{tabular}
+ \endlatexonly
+ \htmlonly
+ <TABLE CELLPADDING=3 BORDER="1">
+ <TR><TH ALIGN="CENTER"><B>VarName</B></TH>
+ <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=100><B>Values</B></TH>
+ <TH ALIGN="CENTER"><B>Default Value</B></TH>
+ <TH ALIGN="LEFT" VALIGN="TOP" WIDTH=125><B>Description</B></TH>
+ </TR>
+ <TR><TD ALIGN="CENTER">DebugFile</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>string</TD>
+ <TD ALIGN="CENTER">input file name.dbg</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>Name of the debug file</TD>
+ </TR>
+ <TR><TD ALIGN="CENTER">OutputFile</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>string</TD>
+ <TD ALIGN="CENTER">input file name.out</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>Name of the output file</TD>
+ </TR>
+ <TR><TD ALIGN="CENTER">AniFile</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>string</TD>
+ <TD ALIGN="CENTER">animation file name.xyz</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>Name of the animation file</TD>
+ </TR>
+ <TR><TD ALIGN="CENTER">OnScreen</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>logical</TD>
+ <TD ALIGN="CENTER">.false.</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>on/off Printing on the screen, on
+      means that nothing will be written in the output file</TD>
+ </TR>
+ <TR><TD ALIGN="CENTER">DebugLevel</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>5,15,25</TD>
+ <TD ALIGN="CENTER">5</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>debug information level (low, medium,high)</TD>
+ </TR>
+ <TR><TD ALIGN="CENTER">OutputLevel</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=100>5,15,25</TD>
+ <TD ALIGN="CENTER">5</TD>
+ <TD ALIGN="LEFT" VALIGN="TOP" WIDTH=125>output information level (low, medium,high)</TD>
+ </TR>
+ </TABLE>
+ \endhtmlonly
+*/
+

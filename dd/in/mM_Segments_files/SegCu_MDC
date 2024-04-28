@@ -1,0 +1,37 @@
+ 1 1 1 1 1 1 1 1 1 1 1 1
+ 2
+ 3600   3600  1800
+     1      2700     3600      900     900     35     0    0      0     0    F      0  0
+     2      2700     1800      900     900     35     0    0      0     0    F      0  0
+
+
+ ------------------------------------------------------------------
+ ------------------------------------------------------------------
+The segment file structure :
+
+Line 1: An integer for each slip system is defined to change the Schmid factors of slip systems
+(1 means that any change is made, 0 means that the Schmid's factor is artificialy set to zero)
+
+line 2: The number of segments
+
+line 3: dimensions of the simulation reference volume
+
+Form line 3 to doted lines: the segments description
+column 1 - The segment index
+column 2 - x coordinate of the segment origin
+column 3 - y coordinate of the segment origin
+column 4 - y coordinate of the segment origin
+column 5 - length of the segment in BVD vector
+column 6 - index of BVD vector for the segment
+column 7 - first neighbor segment at the origin side (zero for pining point)
+column 8 - first non zero length neighbor segment at the origine side (idem)
+column 9 - first neighbor segment at the extremity side (idem)
+column 10- first non zero length neighbor segment at the extremity side (idem)
+column 11- Flag for junction segment
+column 12- index of the junction binome segment
+column 13- Flag for screw segment in cross-sliped state (blocked at the intersection
+           of two glide planes)
+
+Please, note that the index of column 7 to 10 should be negative in starting files.
+Negative index, means that segments connectivity must be checked and where needed
+additional kneecaps will be added before the first simulation step.

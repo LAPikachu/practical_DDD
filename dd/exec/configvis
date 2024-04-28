@@ -1,0 +1,47 @@
+#! /usr/local/bin/bash
+
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathgtemp="$pathdd/gtemp"
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/GraphicsDec"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+
+
+if ! cp $pathoutils/configvis.f90 $pathbin/configvis.f90 ; then  echo -e "\a\n\n Impossible de copier $pathoutils/configvis.f90 " ; exit ; fi
+
+cp $pathin/INPUTCONFIG.HC $pathbin/INPUTCONFIG.HC
+
+
+if ! cd $pathbin ; then  echo -e "\a\n\n Impossible d'ouvrire $pathbin " ; exit ; fi
+
+		echo -en "\n\n compilation de frankreadvis ..........:    "
+
+if ! f90 -C -o frankreadvis configvis.f90; then  
+		echo -e "\a Compilation avortee, Desole"
+		echo -e "\a\n Supression des anciens executables "
+		rm -f frankreadvis
+		rm -f $pathbin/frankreadvis
+		exit
+else
+		echo -e " REUSSI, Bravo \n\n"
+		cp frankreadvis $pathbin/frankreadvis
+		chmod +x frankreadvis
+		chmod +x $pathbin/frankreadvis
+		echo -e " EXECUTION du programme redirige\n\n"
+		echo -e " frankreadvis < INPUTCONFIG.HC ..........\n\n"
+		if $pathbin/frankreadvis < INPUTCONFIG.HC; then
+				echo -e " pas de lancement lancement du gmicromegas"
+		else
+				exit
+		fi
+fi
+
+
+

@@ -1,0 +1,3 @@
+> Test if f2py is working correctly with a minimal example.
+> First compile the program with './compile.sh' : A module 'Hello.so' should have been created
+> Test it with 'python itest.py'

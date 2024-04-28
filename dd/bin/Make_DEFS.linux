@@ -1,0 +1,25 @@
+#######################################################################################
+# Header for the computers platforms                                                  #
+#                                                                                     #
+#  -->  Linux   Linux   Linux   Linux   Linux  Linux   Linux                          #
+#                                                                                     #
+#######################################################################################
+CC=gcc
+FC=gfortran
+MPIFC=mpif90
+
+OMP=-fopenmp
+
+OPTIM= -O3
+
+MODULEOPT=-J
+
+#CFLAGS= -Wall -L/usr/X11R6/lib64  -L/usr/include/X11
+#FFLAGS= -Wall -fcheck=bounds -ffpe-trap=zero,invalid,overflow -ftree-vectorize -L/usr/X11R6/lib64 -L/usr/include/X11
+CFLAGS= -L/usr/X11R6/lib64  -L/usr/include/X11
+FFLAGS= -ftree-vectorize -L/usr/X11R6/lib64 -L/usr/include/X11
+
+CGRAPHLIB  = -lX11 -lgfortran -lm
+COLORSFILE = BlackBG_mac
+MKL_LIBS   = $(BLAS)
+

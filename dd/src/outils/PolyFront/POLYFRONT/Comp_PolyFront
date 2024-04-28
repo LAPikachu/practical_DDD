@@ -1,0 +1,18 @@
+mkdir TMP
+
+echo "*** Files copy ***"
+cp PolyFront.F90 TMP/
+cp BRICAMAT/*.F90 TMP/
+
+cd TMP/
+
+ls
+
+echo "*** Compilation ***"
+$1 -o ../../PolyFrontApp PolyFront.F90
+
+cd ..
+
+rm -fr TMP
+
+echo '*** That all folks !***'

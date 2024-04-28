@@ -1,0 +1,10 @@
+1     1	   -1     ==> hkl  Indice de Miller du plan de glissement teste
+3632  4016  4816  ==> Lx_min Ly_min Lz_min ; Forme min de la boite teste
+3632  4016  4816  ==> Lx_max Ly_max Lz_max ; Forme max de la boite teste par iteraction sur chaque direction
+0     0           ==> dxy dxz ; Shift_min suivant y et z pour les faces de normale x de la boite 
+0     0           ==> dxy dxz ; Shift_max suivant y et z pour les faces de normale x de la boite
+0     0           ==> dyx dyz ; Shift_min suivant x et z pour les faces de normale y de la boite
+0     0           ==> dyx dyz ; Shift_max suivant x et z pour les faces de normale y de la boite
+0     0           ==> dzx dzy ; Shift_min suivant x et y pour les faces de normale z de la boite
+0     0           ==> dzx dzy ; Shift_max suivant x et y pour les faces de normale z de la boite
+100               ==> Profondeur de resolution des equations Diophantine

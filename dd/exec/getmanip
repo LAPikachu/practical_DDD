@@ -1,0 +1,43 @@
+#! /usr/local/bin/bash
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathgtemp="$pathdd/gtemp"
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/Graphics.DEC"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+####         Explication
+###  ce script lit le nom d'un repertoir "manipsauv"
+### il verifie : si le repertoire existe deja dans dd/manip il relie le nom
+### si le repertoire n'existe pas alors il le cree
+### ensuite il copie les trois fichiers input de la simulation (dans dd/in) 
+### et il les met dans la directorie dd/out
+### Ensuite il copie tous les fichiers de la directorie dd/out dans le
+### repertoire  de sauvegarde "manipsauv"
+###
+
+echo -e "\n\n Liste des manipes archivees"
+ls $manip
+
+#creation du repertoire de sauvegarde
+echo -en "\n Nom du repertoir de la sauvgarde dans $manip :   " ; read rep
+manipsauv=$manip/$rep
+
+if ! cd $manip ; then  echo -e "\a\n\n Impossible d'acceder a $manip " ; exit ; fi
+
+# on va dans ce repertoire
+if ! cd $manipsauv ; then  echo -e "\a\n\n Impossible d'ouvrire $manipsauv " ; exit ; fi
+
+# on recopie les fichiers input utils
+echo -e "\n\n Copie des fichiers dans output ........."
+if ! cp -r ./* ../../out/. ; then  echo -e "\a\n Impossible de copier les fichiers output" ; exit ; fi
+
+# compression des fichiers
+gunzip -rv ../../out/*
+
+echo -e "\n\n Operation reussie, Bravo ........."

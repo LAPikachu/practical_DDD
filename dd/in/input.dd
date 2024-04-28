@@ -1,0 +1,15 @@
+The three files needed to run a microMegas simulation.
+These input files must be defined in the directory "dd/in"
+In those files are defined all the info needed to run a simulation.
+
+The sequence order must be respected, but the files name can be modified:
+>>> The material variables file
+>>> The control parameters file
+>>> The initial dislocation segment configuration
+
+Your selection of three files must be defined between those two lines.
+------------------------------------------------------------------------------
+Cu
+ContCu
+Seg_Pinned_Edge
+------------------------------------------------------------------------------

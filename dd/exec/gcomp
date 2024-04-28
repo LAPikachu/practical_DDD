@@ -1,0 +1,41 @@
+
+
+
+if ! cd ../src/graph/Graphics/ ; then  echo -e "\a\n\n Impossible d'ouvrire ../src/graph/Graphics/ " ; exit ; fi
+rm -rf core.*
+rm -rf ../in/core.*
+rm -rf ../out/core.*
+echo -e "\n Supression de l'ancien listing_graph.c dans cd ../src/graph/Graphics/............. \n" 
+rm -f listing_graph.c
+
+cat 01Cmain.c 02Ccristallo.c 03Cdraw.c 04Clame.c 05Clook_seg.c  06Caide.c \
+	07Cperspective.c 08Cpredraw.c 09Csegments.c 10Csegout.c 11Ctrace.c \
+	12Cwindow_init.c 13C_post_image_ps.c 14_bricamat.c  > listing_graph.c
+pwd
+if ! cd ../../../bin ; then  echo -e "\a\n\n Impossible d'ouvrire ../../..//bin " ; exit ; fi
+
+echo -e "\n Supression de l'ancien listing dans ../src/simu  ........................... \n" 
+rm -f ../src/simu/micromegas.f90
+
+echo -e "\n Effacement de l'ancien executable gmicromegas  ........................... \n" 
+rm -f gmm
+
+echo -e "\n Lancement de la compilation de gmicromegas  ........................... \n" 
+make gmm
+
+echo -e "\n Concatenation des fichier sources *.f90 dans micromegas.f90  ........................... \n" 
+
+if ! cd ../src/simu ; then  echo -e "\a\n\n Impossible d'ouvrire ../src/simu " ; exit ; fi
+
+
+
+cat 01constantes.f90 02bricamat.f90 03varbase.f90 04varglob.F90 carto.f90 06debug.f90 07init.F90 \
+    08connec.f90 microstructure.F90  09elasti.F90 10dynam.F90 11topolo.f90 12contact.f90 13resul.F90 \
+    14bigsave.F90 15main.F90 > mM.F90
+if ! cd ../../bin ; then  echo -e "\a\n\n Impossible d'ouvrire ../../bin " ; exit ; fi
+
+echo -e "\n\n Lancement de MicroMegas ...........................\n" 
+./gmm
+
+
+

@@ -1,0 +1,76 @@
+Input file for the simulations working with closed domains
+
+<--> In micromegas the boundaries of a convex domain are defined using equation of planes (Ax + By + Cz = D   A,B and C must be integer)
+<--> Concave domains must be defined as the union of convex domain
+
+******ALL PLANES MUST BE DEFINED WITH THE NORMAL VECTOR (MILLER INDEX) POINTING OUTSIDE THE VOLUME**********
+
+exemple (1)  cubic box with fixed boundaries
+1                    !  NbCvxDom = number of convex domains in the simulation box
+F                    !  key_Rot_Dom = key to impose crystal rotation in domains (see file eulerangle_dat)
+
+6                    !  Nbplcvxdom = number of fixed boundaries
+0                    !  NbFreeSurf = number of free surfaces
+
+-1 0 0       -100.   0  ! Equation of the first plane in the cubic box Ax + By + Cz = D. the 0 at the end means that this is a "real" boundary
+0 -1 0       -100.   0
+0 0 -1       -100.   0
+1 0 0    3000.       0
+0 1 0    3000.       0
+0 0 1    3000.       0  ! Equation of the sixth plane in the cubic box Ax + By + Cz = D. the 0 at the end means that this is a "real" boundary
+
+
+exemple (3) concave domain composed by four convex domains (be carefull to define a concave domain, the convex domains must be contiguous)
+4                   !  NbCvxDom = number of convex domains in the simulation box
+
+2                    !  Nbplcvxdom = number of fixed boundaries in the first convex domain
+2                    !  NbFreeSurf = number of free surfaces in the first convex domain
+
+2                    !  Nbplcvxdom = number of fixed boundaries in the second convex domain
+2                    !  NbFreeSurf = number of free surfaces in the second convex domain
+
+
+3                    !  Nbplcvxdom = number of fixed boundaries in the third convex domain
+1                    !  NbFreeSurf = number of free surfaces in the third convex domain
+
+3                    !  Nbplcvxdom = number of fixed boundaries in the fourth convex domain
+0                    !  NbFreeSurf = number of free surfaces in the fourth convex domain
+
+
+0 0 -1    -2000.     0 ! Equation of the first plane in the first convex domain  (Ax + By + Cz = D). the 0 at the end means that this is a "real" boundary for the concave domain
+0 1 0  1908          1 ! Equation of the second plane in the first convex domain  (Ax + By + Cz = D). the 1 at the end means that this is NOT a "real" boundary for the concave domain, but an internal bounadary, shared with another convex domain
+0 1 1 5008           0 ! Equation of the third plane in the first convex domain  (Ax + By + Cz = D). Free surface, the 0 at the end means that this is a "standalone" free surface
+0 0 1     4000.      2 ! Equation of the fourth plane in the first convex domain  (Ax + By + Cz = D). Free surface. the 2 at the end means   that this free surface is shared with another convex domain
+
+0 0 -1    -2000.     0
+0 -1 0    -2108      1
+0 -1 1    992        0
+0 0 1     4000.      2
+
+
+0 0 -1    -2000.     0
+0 1 0    2108        1
+0 -1 0   -1908       1
+0 0 1     3100.      0
+
+
+0 -1 -1   -3008.     0
+0 1 -1   1008.       0
+0 0 1    2000        1
+
+
+> Reading start after the following line
+###########################################################
+1                    !  NbCvxDom
+F                    !  key_Rot_Dom
+
+6                    !  Nbplcvxdom
+0                    !  NbFreeSurf
+
+-1 0 0       -100.   0
+0 -1 0       -100.   0
+0 0 -1       -100.   0
+1 0 0    3532.       0
+0 1 0    3916.       0
+0 0 1    4716.       0
+

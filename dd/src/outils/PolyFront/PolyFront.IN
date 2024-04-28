@@ -1,0 +1,38 @@
+0		        	! mode : 0 sinon bug !***!
+50 50 50   
+-5 11 -4	
+1070 1170 1080
+0      0
+0      0
+0      0
+10
+
+0		        	! mode : 0 sinon bug !***!
+34	27	27	! optimise CFC
+1	1	-1	
+3624	4008	4816	
+0	0
+0	0
+0	0
+10
+
+=================================
+
+0		              ==> mode : 0 sinon bug !* En cours de codage... Depuis longtemps certes *!
+ni     dim_x    dim_y         ==> nombre_d_iterations pour profondeur de recherche; Taille pavaga approx x; taille pavage approx y
+h	k	l             ==> Indice de miller du plan
+Lx	Ly	Lz            ==> Dimension de la boite de simulation
+dxy	dxz                   ==> Decalage direction y sur face x; Deacalage direction z sur face x
+dyx	dyz                   ==> Decalage direction x sur face y; Deacalage direction z sur face y
+dzx	dzy                   ==> Decalage direction x sur face z; Deacalage direction y sur face z
+polygone_initial              ==> Indice du polygone initial (polygone de position - n = hx+ky+lz avec (x,y,z) un point du plan -
+
+
+Fichiers de sortie :
+--------------------
+
+PolyFront.eps
+-> ecrit en cours d'execution en utilisant dim_x & dim_y : les polygones deja rencontres sont colories
+
+PolyFront.epsf
+-> ecrit en fin de programme : idem a PolyFront.eps, mais avec un bon cadrage

@@ -1,0 +1,12 @@
+  1.  0.  0.        !The reference stress tensor to apply.
+  0.  1.  0.        !This applied stress tensor is corrected in mM
+  0.  0.  0.        !to be length conservative in the Z (strain gauge) direction
+
+  1.  0.  0.        ! A direction used to calculate deformation in a reference direction.
+                    ! Such direction is used as a macro strain gauge to control plastic strain
+                    ! in a particular direction.
+
+This input file is used in mM to impose homogeneous loading of non uniaxial type.
+
+
+

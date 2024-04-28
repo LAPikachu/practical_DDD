@@ -1,0 +1,34 @@
+#! /bin/bash
+# Ancien script de GM modifie pour rester compatible avec la nouvelle structure (directories) du projet 
+# dans l avenir on suprimera ce script pour integrer directement la compilation de config.f90 dans le makefile
+
+export pathdd=".."
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/Graphics"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export pathin="$pathdd/in"
+
+if ! cd $pathbin ; then echo -e "\a\n\n Impossible d'aller a ../bin " ; exit ; fi
+
+if ! cp -f $pathoutils/config.f90 config.f90 ; then  echo -e "\a\n\n Impossible de copier config.f90 " ; exit ; fi
+if ! cp -f $pathin/INPUTCONFIG.CFC INPUTCONFIG.CFC ; then  echo -e "\a\n\n Impossible de copier INPUTCONFIG.CFC" ; exit ; fi
+
+echo -en "\n\n compilation de config ..........:    "
+
+if ! pgf90 -O -N11 -o confinit config.f90; then  
+  echo -e "\a\n\n Compilation avortee, Desole"
+  rm -f config.f90
+  rm -f INPUTCONFIG.CFC
+  rm -f *.mod
+else
+  echo -e " Compilation OK \n\n"
+  chmod +x confinit
+  echo -e " EXECUTION du programme redirigee\n\n"
+  echo -e " confinit < INPUTCONFIG.CFC..........\n\n"
+  confinit < INPUTCONFIG.CFC
+  rm -f config.f90
+  rm -f INPUTCONFIG.CFC
+  rm -f *.mod
+fi

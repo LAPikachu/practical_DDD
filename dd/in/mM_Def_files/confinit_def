@@ -1,0 +1,57 @@
+333             fibost          !Seed of the random number generator
+4.9             xnmax           !Average size of the simulated volume V in micron
+0.905           para(1)         !Exact dimension of V in the X direction (in xnmax unit)
+1.0             para(2)         !Exact dimension of V in the Y direction (in xnmax unit)
+1.198           para(3)         !Exact dimension of V in the Z direction (in xnmax unit)
+3               nbud            !Number of slice used to optimized the dislocation density homogeneity
+2.0             densfr          !Expected density (10^12 per m^2)
+1.0             long            !Average length of the dislocation segments in the microstructure (microns)
+0.0             disperl         !The segment length dispersion
+0.3             dlong           !Discretization length use to build up different dislocation character (micron)
+1.2             dok             !Tolerate error in the microstructure distribution ( >>1 means any filtering )
+3               micro           !Type of segment microstructure: 1->sources; 2->dipoles; 3->dipolar loops; 4-> Planar loop
+1               ratio           !The ratio between segment length in loops or dipolar loops (needed in  case(3:4))
+3               segchar         !Type of segments character in microstructure 1 and 2 ( 1 -> screw, 2 -> edge, 3 -> random, -X -> character of angle X)
+1. 0. 0. 0. 0. 0.               !When micro=4, a loading unit tensor (11 22 33 32 31 21) is needed to build non collapsing loops.
+1               isys(1)         !sys 1 (The slip systems contribution to the total density. 0 = no disloc on the corresponding system)
+1               isys(2)         !sys 2 (note that isys(i) must be integer and can be larger than 1 to buildup heterogeneous micro)
+1               isys(3)         !sys 3
+1               isys(4)         !sys 4
+1               isys(5)         !sys 5
+1               isys(6)         !sys 6
+1               isys(7)         !sys 7
+1               isys(8)         !sys 8
+1               isys(9)         !sys 9
+1               isys(10)        !sys 10
+1               isys(11)        !sys 11
+1               isys(12)        !sys 12
+
+===============================================================
+
+This file defines the inputs to build up different kind of initial configurations (microstructure)
+for the mM simulation. (to generate an initial configuration you have to launch ../bin/mm --initconf)
+
+Four different types of configuration are now proposed in confinit:
+    micro = 1
+  The initial configuration is made of a random distribution of pinned segments,
+acting as Frank-Read sources.
+    micro = 2
+  The initial configuration is made of a random distribution of pinned segments,
+acting as Frank-Read sources. But now, the mechanical state of the initial
+configuration is optimized by considering dipoles segments. In the simulated volume
+there is always two segments with same length and opposite sign.
+    micro = 3
+  The initial configuration is made of a random distribution of dipolar loops.
+Such loops are made of four edge segments in different glide planes. Such loops
+are glissile and helps forming rapidly a 3D dislocation network free of any pinning points
+    micro = 4
+  The initial configuration is made of a random distribution of glissile loops. Attention
+is paid to define only expending loops for a given loading condition.
+
+Warning: for the bi-phase simulations, the initial configurations have to be build from the
+output files BVD.CFC and BVD2.CFC . You should transfer BVD2.CFC as BVD.CFC in order to build
+the second phase.
+The volumes of the two phases must have exactly the same dimensions. As a consequence a common
+"Facteur_boite" must be imposed for the two phases. After that you will probably have to rewrite
+the box dimensions in order that theses dimensions would be equivalent (with the conideration of
+the homothetie factor) for the two phases.

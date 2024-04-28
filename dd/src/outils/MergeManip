@@ -1,0 +1,33 @@
+echo ""
+echo " Decompression "
+gunzip $1/*.gz
+gunzip $2/*.gz
+mkdir tmp
+cp $1/* tmp/.
+more $2/trav >> tmp/trav
+more $2/gamma >> tmp/gama
+more $2/rau >> tmp/rau
+more $2/sigeps >> tmp/sigeps
+more $2/stat >> tmp/stat
+more $2/sigint >> tmp/sigint
+
+echo ""
+echo " Compression "
+echo ""
+
+gzip $1/*
+gzip $2/*
+gzip tmp/*
+mv tmp $3
+
+cp $1/*.txt.gz $3/.
+cp $2/*.txt.gz $3/.
+cp $2/SEG3D_pm.gz $3/.
+cp $2/SEGO3D.gz $3/.
+cp $2/control_pm.gz $3/.
+cp $2/film.gz $3/.
+cp $2/sau*.gz $3/.
+cp $2/tabul_pm.gz $3/.
+
+
+

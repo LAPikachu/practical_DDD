@@ -1,0 +1,32 @@
+Example of file used to define Euler angles in a multi-grains simulation (Unit Pi)
+
+The geometrical definition of the Euler angles is based on the axes of the original xyz (simulation) and rotated XYZ reference frames and an additional axis called the line of nodes. The line of nodes (N) is defined as the intersection of the xy and the XY coordinate planes. In other words, it is a line passing through the common origin of both frames, and perpendicular to the zZ plane, on which both z and Z lie. The three Euler angles are defined as follows:
+
+\alpha is the angle between the x axis and the N axis.
+\beta is the angle between the z axis and the Z axis.
+\gamma is the angle between the N axis and the X axis.
+
+This definition implies that:
+
+\alpha represents a rotation around the z axis,
+\beta represents a rotation around the N axis,
+\gamma represents a rotation around the Z axis.
+
+The file form is as follows
+
+- First line must define the number of grains
+  if nbgrains = 0, then no disorientation is applied to the grains
+- following lines are 3 angles per grains
+
+e.g.:
+
+3
+0.033  0.22   0.033
+0.056  0.11   0.056
+0.056  0.22   0.056
+
+
+Input data start here !
+#########################
+1
+0.0  0.0   0.0

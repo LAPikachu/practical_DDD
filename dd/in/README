@@ -1,0 +1,33 @@
+This is the directory where all the input files of the simulation mM are located!
+
+To run a standard DD simulation, one need to define  three input files identified thanks to "input.dd"
+--> the material variables file                     (e.g. Cu)
+--> the control parameters file                    (e.g. ContCu)
+--> the intial dislocation configuration file     (e.g. SegCu)
+
+Few exemples of such files, corresponding to different types of materials or simulation experiments, are provided
+in this mM directory.
+
+A discription of the intial dislocation configuration file format is given at the end of "SegCu"
+
+--------
+
+Additionaly, The following files should be present in mM archives (or will be present after your first run).
+
+- inputconfinit -> the input file used by the application "confinit" to generate an initial configuration
+
+- b_plan, b_poly, b_sphere, euler_angle -> the input files needed to run polyphase simulations
+
+- particules -> the input file needed tu run DD simulation in a matrix including small (point) elastic inclusions
+
+- shift_rotation  -> the input file used to impose a shift and/or a rotation at the boundaries of the simulation periodic cell
+
+- random -> a seed file used by the fibonatchy random generator 
+
+- SEG_relax and SEG_save -> two outputs of the simulation (after the initial relaxation or later) 
+                            that can be used latter as initial configuration file.
+
+- disdi -> the file containing tabulated values of anisotropic line tension as a function of dislocation character
+           (this file is generated with disdi, J. Douin's computation code).
+
+- tensapp -> The file containing a reference applied tensor used for complex loading

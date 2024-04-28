@@ -1,0 +1,14 @@
+#!/bin/csh
+# sauvegarde d'une manip
+if ($#argv == 1) then
+	rm -fr ../manip/$1
+	cp ../exec/*.txt ../out/.
+        cp ../in/*.micmeg ../out/.
+        rm -f ../out/*2
+	cp -r ../out ../manip/$1
+	gzip -rv ../manip/$1
+else
+	echo Wrong Argument Specification
+	echo usage : save_manip filename
+endif 
+

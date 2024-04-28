@@ -1,0 +1,174 @@
+###############################################################################
+# This file contains all you need to compile most of the codes connected      #
+# to the microMegas project.                                                  #
+###############################################################################
+
+PROGS=mm mmp gmm mdc mdcp cam base pavage histo film2para film2seg
+
+# Contents for building mm
+mm_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto \
+06debug  07init 08connec initconftools microstructure 09elasti 10dynam \
+11topolo 12contact 13resul 14bigsave nucleation 15main
+
+# Contents for building mmp
+mmp_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto \
+06debug 07init 08connec initconftools microstructure 09elasti 10dynam \
+11topolo 12contact 13resul 14bigsave nucleation 15main
+
+# Contents for building gmm
+gmm_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto \
+06debug 07init 08connec initconftools microstructure 09elasti 10dynam \
+11topolo 12contact 13resul 14bigsave 05intergra nucleation 15main graph
+
+# Contents for building mdc
+mdc_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto \
+06debug MDCtools 08connec initconftools microstructure \
+07init 09elasti 10dynam \
+11topolo 12contact 13resul 14bigsave nucleation 15main
+
+# Contents for building mdcp
+mdcp_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto \
+06debug MDCtools 08connec initconftools microstructure \
+07init 09elasti 10dynam \
+11topolo 12contact 13resul 14bigsave nucleation 15main
+
+# Contents for building cam
+cam_CONTENTS=\
+graph camera
+
+# Contents for building base
+base_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat base
+
+# Contents for building pavage
+pavage_CONTENTS=\
+ConstrucPoly2
+
+# Contents for building histo
+histo_CONTENTS=\
+histo
+
+# Contents for building film2seg
+film2seg_CONTENTS=\
+01constantes 03varbase 04varglob 02bricamat carto 06debug 07init 08connec film2seg
+
+# Contents for building film2para
+film2para_CONTENTS=\
+film2para
+
+## Source files locations
+VPATH=../src/outils:../src/simu:../src/graph/Graphics:.
+
+## Destination color file
+destcolorsfile=../in/couleur.micmeg
+
+## Specific versions (debug,...) handling
+ifeq ($(VER),db)
+  OPTIM=-g
+  VERTAG=.db
+endif
+ifeq ($(VER),p)
+  OPTIM=-pg
+  VERTAG=.pg
+endif
+
+## Specific variable definition and overloading
+cc=$(CC)
+fc=$(FC)
+lk=$(FC)
+
+mmp : EXECFLAGS=-DPA
+mmp : fc=$(MPIFC)
+mmp : lk=$(MPIFC)
+
+gmm : EXECFLAGS=-DGX
+gmm : EXTRALINK=$(CGRAPHLIB)
+gmm : lk=$(CC)
+
+mdc : EXECFLAGS=-DMDC
+mdc : fc=$(MPIFC)
+mdc : lk=$(MPIFC)
+
+mdcp : EXECFLAGS=-DMDC -DPA
+mdcp : fc=$(MPIFC)
+mdcp : lk=$(MPIFC)
+
+cam : EXTRALINK=$(CGRAPHLIB)
+cam : lk=$(CC)
+
+histo : fc=$(FC) $(OMP)
+histo : lk=$(FC) $(OMP)
+
+## Base rules
+all: mm mmp gmm cam base pavage histo film2seg film2para
+
+## Program rules patern. This is the heart of the makefile (see make doumentation about "eval" function for simplier example)
+progs_dir=
+define PROG_template
+$(1)_dir=$(1)$(VERTAG).objs
+$(1)_objs=$$(addprefix $$($(1)_dir)/, $$(addsuffix .o, $$($(1)_CONTENTS)))
+ifneq ($$(strip $$(VER)),)
+$(1):$(1)$$(VERTAG);
+endif
+$(1)$$(VERTAG): $$($(1)_objs) $(destcolorsfile)
+	@echo %% Linking $$@
+	$$(lk) $$(OPTIM) $$(MKL_LIBS) -o $(1)$$(VERTAG) $$($(1)_objs) $$(EXTRALINK)
+$$($(1)_dir)/%.o : %.f90 | $$($(1)_dir)
+	@echo %% Compiling object $$@
+	$$(fc) -c $$(OPTIM) $$(FFLAGS) $$(EXECFLAGS) -I$$($(1)_dir) $$(MODULEOPT)$$($(1)_dir) -o $$@ $$<
+$$($(1)_dir)/%.o : %.F90 | $$($(1)_dir)
+	@echo %% Compiling object $$@
+	$$(fc) -c $$(OPTIM) $$(FFLAGS) $$(EXECFLAGS) -I$$($(1)_dir) $$(MODULEOPT)$$($(1)_dir) -o $$@ $$<
+$$($(1)_dir)/%.o : %.c | $$($(1)_dir)
+	@echo %% Compiling object $$@
+	$$(cc) -c $$(OPTIM) $$(CFLAGS) $$(EXECFLAGS) -o $$@ $$<
+$$($(1)_dir):
+	@echo %% Create directory $$@
+	@mkdir -p $$@
+progs_dir+=$$($(1)_dir)
+endef
+$(foreach prog,$(PROGS),$(eval $(call PROG_template,$(prog))))
+
+## Cleaning targets
+clean:
+	@for dir in $(progs_dir); do       \
+	  if [ -d $$dir ]; then            \
+            echo %% Removing directory $$dir; \
+	    rm -rf $$dir;                  \
+	  fi                               \
+	done
+
+cleanall: clean
+	@for prog in $(PROGS); do      \
+	  if [ -f $$prog$(VERTAG) ]; then       \
+            echo %% Removing file $$prog$(VERTAG); \
+	    rm -f $$prog$(VERTAG);              \
+	  fi                           \
+	done
+	@echo %% Removing color file $(destcolorsfile)
+	@rm -f $(destcolorsfile)
+
+## Copying color file target
+$(destcolorsfile):
+	cp -f ../src/graph/Graphics/$(COLORSFILE) $(destcolorsfile)
+
+## Makefile creation targets
+linux: config Make_DEFS.linux
+	cat Make_DEFS.linux config > makefile ;
+
+intel : config Make_DEFS.intel
+	cat Make_DEFS.intel config > makefile ;
+
+macports: config Make_DEFS.macports
+	cat Make_DEFS.macports config > makefile ;
+
+homebrew: config Make_DEFS.homebrew
+	cat Make_DEFS.homebrew config > makefile ;
+
+## PHONY declaration
+.PHONY: clean cleanall linux intel macports homebrew

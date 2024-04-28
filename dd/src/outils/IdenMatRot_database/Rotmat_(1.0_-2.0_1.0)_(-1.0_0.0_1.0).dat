@@ -1,0 +1,46 @@
+>> IdenMatRot 
+Resul obtained when looking for a rotation matrice with integers with :
+v1=[ 1. -2.  1.] and v2=[-1.  0.  1.]
+Inspection limit was 30 and tolerance was 0.98
+
+Homothety factor (matrix norme) : 17.0
+Quality -> 0.984598818178 0.998268396969
+Rotation matrice :
+[  8 -12   9]
+[-12   1  12]
+[ -9. -12.  -8.]
+
+Homothety factor (matrix norme) : 25.0
+Quality -> 0.996125828732 0.989949493661
+Rotation matrice :
+[  9 -20  12]
+[-20   0  15]
+[-12. -15. -16.]
+
+Homothety factor (matrix norme) : 17.0
+Quality -> 0.984598818178 0.998268396969
+Rotation matrice :
+[  9 -12   8]
+[-12  -1  12]
+[ -8. -12.  -9.]
+
+Homothety factor (matrix norme) : 25.0
+Quality -> 0.996125828732 0.989949493661
+Rotation matrice :
+[ 12 -20   9]
+[-15   0  20]
+[-16. -15. -12.]
+
+Homothety factor (matrix norme) : 34.0
+Quality -> 0.984598818178 0.998268396969
+Rotation matrice :
+[ 16 -24  18]
+[-24   2  24]
+[-18. -24. -16.]
+
+Homothety factor (matrix norme) : 34.0
+Quality -> 0.984598818178 0.998268396969
+Rotation matrice :
+[ 18 -24  16]
+[-24  -2  24]
+[-16. -24. -18.]

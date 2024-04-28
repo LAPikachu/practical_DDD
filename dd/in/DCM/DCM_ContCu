@@ -1,0 +1,52 @@
+T           Mode_deformation_key  True: MicroMegas has the control of the applied deformation
+0           Mode_deformation  0 constant strain rate; 1=make carto; 2=run carto; 3=stress rate; 4=cst stress; 5=fatigue; 6=metalofute; 7=metalofute2; 8 constant stress field  (FE_Sig file) superposed to the FE one, 9=creep; !parameter used only if  Mode_deformation_key = T
+
+13.5        Echelle           Reference scale, i.e. size of elementary screw vectors in BVD.XXX (Burgers vector unit)
+
+21.0        Sigma0             Initial stress (MPa)                        (mode_deformation=0)  !parameter used only if  Mode_deformation_key = T
+2.0D10      SigmaPoint        Elementary stress increments (MPa s-1)      (mode_deformation=3,6,7,10) !parameter used only if  Mode_deformation_key = T
+20.         EpsilonPoint      Imposed strain rate (s-1)                   (mode_deformation=0,5,6,7,9) !parameter used only if  Mode_deformation_key = T
+1.5         RAID              Apparent Young modulus                      (mode_deformation=0,5,6,7) !parameter used only if  Mode_deformation_key = T
+3.0D-5      EPSMAX            Maximum plastic strain per cycles           (mode_deformation=5) !parameter used only if  Mode_deformation_key = T
+1.D0        FSIG              loading sign for the first cycle            (mode_deformation=5,6,7) !parameter used only if  Mode_deformation_key = T
+
+2           LINTEN            Line tension definition:  0->Friedel;    1->DeWit;   2->Foreman;    3->Tabulated;  4->Mohles
+T           GLDEV             Cross slip activation key : True = cross-slip active
+F           NUCL              Nucleation activation key : True = nucleation active (control parameters are found the in nucl_init file )
+F           infline          status of PBC induced infinite lines : True = The applied stress is not considered for the infinite line
+F           key_crack         Add the stress field of a sharp crack in the simulated volume  (T/F=on/off)
+
+0 0 1       Tensile_axis      Tensile or compression uniaxial test direction (Miller indices) (mode_deformation=0)
+300.        Temperature       Temperature (Kelvin)
+100         Facteur_Depmax    Maximum segment displacement in a simulation step (Burgers vector unit)
+
+50          NstatControl      Number of steps accounted for in the simulation control procedure (mode_deformation = 0)
+
+0           relax_TL          Number of steps ascribed to initial relaxation when involving line tension only
+0           relax_INT         Number of steps ascribed to initial relaxation under no applied load and with no contact reactions allowed
+0           relax_reac        Number of steps ascribed to initial relaxation under no applied loading
+
+0.2         Ldis_act          Segment length (micron) at which line discretization is systematically tested  (micron).
+0.4         Ldis_nact         Same as above for segments belonging to an inactive slip systems (micron).
+
+10          Period            Number of steps before force on waiting (quasi-immobile) segments is recalculated
+-1.0        L_Boite           Linear mean size of domain decomposition (micron), dynamically defined if negative
+
+50          DCFJ              Maximum Distance at which stress is calculated on the segments connected to a junction (unit: Burgers vector)
+
+0           GB                interface and surface definitions: 0-> inactivates, 1-> planes, 2->spherical, 3->regular 3D network (polycristal)
+
+100         TauINT_LIMITE     Critical stress at which segments are considered as in a singular field (MPa)
+
+10          KISAUVE           Write periodicity of segment configurations and information needed to restart computation
+10          KSTATS            Write periodicity of results
+10          KKIM              Write periodicity of the trajectory film
+
+10          KPREDRAW          Periodicity of refreshment of the graphical interface in gmm mode
+
+0           shift_rotation    Key for translation and rotation of the simulated volume (see the shift_rotation file)
+
+-6542       iterinfo          Step of debugging (no debugging if negative)
+-2          sysinfo           Slip system of interest in debugging procedure (needed in simulations with many segments)
+
+350         halfthickness         half-thickness of the inclusion in which the plastic eigenstrain is loaded (!!!! useful onnly in  MDC calculations !!!!)

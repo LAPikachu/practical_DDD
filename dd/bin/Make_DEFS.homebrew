@@ -1,0 +1,24 @@
+#####################################################################################e
+# Header for the computers platforms                                                  #
+#                                                                                     #
+#  -->    Homebrew  Homebrew  Homebrew  Homebrew  Homebrew  Homebrew                  #
+#                                                                                     #
+# Here assumption is made that a symbolic link (ln -s) was created in /usr/local/bin  #
+# pointing on the compilers you wants to use.                                         #
+#######################################################################################
+
+CC=/usr/local/bin/gcc-6
+FC=/usr/local/bin/gfortran
+MPIFC=/usr/local/bin/mpif90 -bind_at_load
+
+OMP=-fopenmp
+OPTIM= -O3
+MODULEOPT=-J
+
+CFLAGS= -L/usr/X11R6/lib -I/opt/X11/include
+FFLAGS= -ftree-vectorize -L/usr/X11R6/lib -I/opt/X11/include
+
+CGRAPHLIB  = -L/usr/X11/lib -lX11 -lgfortran
+COLORSFILE = BlackBG_mac
+MKL_LIBS   = -L/usr/local/lib -llapack -lcblas
+

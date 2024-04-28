@@ -1,0 +1,65 @@
+To compil the simulation:
+
+1) You need to buildup a makefile dedicated to the machine you want to run the simulation.
+Solutions are already existing for few different platforms, you should be able to do a makefile for your computer
+whithout to much efforts ;)
+
+The "config" file is the part of "makefile" which is the same for all the machines
+
+To create a new machine 'makefile' you must add at the end of config the corresponding ".PHONY" definition.
+
+Then, you need to buildup your one "Make_DEFS" file. This file is going to define the header needed for
+your home machine. You can use as an example one of the following solutions.
+
+Make_DEFS.linux       -> The header definition we use for a linux cluster with gcc and gfotran
+Make_DEFS.macports    -> The header definition we use for a mac computer with linux tools installed with macports
+Make_DEFS.intel       -> The header definition we use for a linux cluster with intel compilers
+
+Once you have made your "Make_DEFS.machine_type", then you can type:
+
+make -f  config machine_type
+
+(for instance on my macbook I simply type "make -f config macports")
+
+Now you have a "makefile" file created in the bin directory
+
+2) Then, according what you need you can execute
+
+make ou make all                to compile most microMegas project binaries for simple simulations (additional compilations are needed for some extra tools!)
+make mm                         to compile only the batch version of the simulation
+make gmm                        to compile only the simulation with its graphical interface (interactive mode)
+make mmp                        to compile only the batch version for MPI parallel calculations
+make cam                        to compile only the graphical interface (needed to see the simulation film without paraview)
+make base                       to compile only the code needed to generate the simulation vectors base
+make confinit                   to compile only the code needed to generate random intitial configurations
+make pavage                     to compile only the code needed to generate the database needed for the simulation interfaces
+make clean                      to sweep out all the useless pieces of codes
+make cleanall                   to clean up everything
+etc ...
+
+3) To run the simulation simply type
+
+ mm > screen &                                               (to run the simulation in batch mode)
+ gmm                                                         (to run the simulation in interactive mode and with the graphic interface)
+ mpirun -np "x" -machinefile ../in/hosts.dd mmp > screen &   (to run an MPI batch simulation with x procs)
+
+4) additional tools are:
+ cam       (The camera code to see after and during calculations the film of the simulation)
+ confinit  (The code used to buildup initial configurations)
+ base      (The code you can use to generate alone the base of vectors used in the simulation)
+ pavage    (The code used to generate the interfaces files "b_poly" needed to simulate periodic polycrystals)
+ histo     (The code used to do some data mining in the simulation outpu files)
+ film2para (The code used to convert the mM simulation trajectory file film.bin in paraview format)
+ film2seg  (The code used to extract an initial configuration file from a previous trajectory file film.bin)
+
+5) where and who is who
+
+- all the inputs data are define in the directory "../in"
+ Take a look to the README file in this directory for more information
+
+- all the outputs data are written in the directory "../out"
+ Take a look to the README file in this directory for more information
+
+-------------------
+This is essentially what you need to start with.
+A "Users' Guide" is in progress and should be in the "../src/doc" ASAP ;)

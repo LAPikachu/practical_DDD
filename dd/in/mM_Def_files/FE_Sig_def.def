@@ -1,0 +1,39 @@
+1.          ! Stress_fact = the factor that multiply the stress field
+-0.04       ! The reference deformation amplitude need for normalisation in strain rate control (Stress_fact = 0)
+0.7         ! The min factor set to the stress factor in strain rate control (Stress_fact = 0)
+10.0        ! The max factor set to the stress factor in strain rate control (Stress_fact = 0)
+ 0  0  0    ! origin of the parallelepiped in which external stress field is defined
+-1 -1 -1    ! dimension of the parallelepiped in which external stress field is defined (negative means all the simulation box)
+ 3  3  3    ! dimension of the grid used to define the stress field
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+45 0 0  0 0 0
+
+------------------
+########## The stress must be defined in MPa!!!!!!! #################
+An example of input file taken from a FE mesh calculation
+to impose any type of in-homogeneous loading in mM!

@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+ 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\setlength\parindent{0pt} %No indent whole file
+
+\title{How to : Install VTK CAMera for mm}
+\date{3 June 2016}
+
+\begin{document}
+   \maketitle
+   
+\section*{Requisite:}
+\begin{itemize}
+\item 2.7 $\geq$ Python < 3.0 
+\item VTK $\geq$ 6.0
+\item Python VTK wrapper
+\item f2py
+\end{itemize}
+
+  \tableofcontents
+
+\section{(Optional) Desinstall older version of vtkam}
+
+If you have install former vtkam version, the package has been installed by default to a similar path :
+\\
+\texttt{/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/}
+\\
+If so, remove former vtkam package and its associate .egg from the last directory
+
+\section{Check Python Path}
+
+The Python path will allow python to find the vtkam package installation directory.
+\\
+Before installing vtkam, your PYTHONPATH should look something like :\\ \\
+\texttt{echo \$ PYTHONPATH\\
+:/VTK/Wrapping/Python/:/VTK/lib/:}
+
+\section{Add vtkam package to Python Path}
+
+Now, your PYTHONPATH should look something like :\\ \\
+\texttt{echo \$ PYTHONPATH\\
+:/VTK/Wrapping/Python/:/VTK/lib/:\\
+/VTK/bin:/Users/Laurent/Documents/MicroMegas/SVN/src/outils/vtkam/install/lib/python}\\
+
+
+$\cdots$ if the installation directory was called 'install'. It should be followed by '/lib/python'
+
+
+\section{Install vtkam}
+
+Go into the src directory of vtkam, usually 
+\texttt{/src/outils/vtkam/}
+then,\\ \\
+\texttt{python setup.py install --home=/Your/Installation/Directory} (here: ./install)
+\\ \\
+\textbf{Note : the shell script 'install.sh' in \texttt{/src/outils/vtkam/} install vtkam in the \texttt{src/outils/vtkam/install} directory and add the path to the PYTHONPATH}
+
+
+\section{Use vtkam}
+
+You can use vtkam from any 1st subfolder of your mm directory (bin, in, out, Project,$\cdots$) by doing :
+
+\texttt{import vtkam.vtkam} in your python environment.\\
+or use \texttt{python vtkam\_start.py }in the \texttt{bin} folder
+
+
+\end{document}

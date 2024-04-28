@@ -1,0 +1,6 @@
+ -1     -8     4          ! The rotation matrix
+  8     1      4
+ -4     4      7
+
+972 ! New simulation "Facteur_boite" induced by this rotation
+9   ! Homothecy factor associate to this rotation

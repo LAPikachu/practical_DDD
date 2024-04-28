@@ -1,0 +1,59 @@
+-1 1 0	Slip%planes	Famille de plans de glissements
+1 1 0 	Slip%directions	Famille des directions de glissement
+6	Slip%Nsystemes	Nombre de systèmes identiques dans la famille
+
+ 1 0 0
+ 0 1 0			!(-110)[110]	inverse=1
+ 0 0 1
+
+-1 0 0
+ 0 1 0			!(110)[1-10]	inverse=-1
+ 0 0 1 
+
+ 0 0 1
+ 1 0 0			!(0-11)[011]	inverse=1
+ 0 1 0
+
+ 0 0 1
+-1 0 0			!(011)[01-1]	inverse=-1
+ 0 1 0
+
+ 1 0 0 
+ 0 0 1 			!(-101)[101]	inverse=1
+ 0 1 0
+
+-1 0 0
+ 0 0 1 			!(101)[10-1]	inverse=-1
+ 0 1 0
+ 
+0 0 1	Slip%planes	Famille de plans de glissements
+1 1 0	Slip%directions	Famille des directions de glissement
+6	Slip%Nsystemes	Nombre de systèmes identiques dans la famille
+
+ 1 0 0
+ 0 1 0			!(001)[110]	inverse=1
+ 0 0 1
+
+-1 0 0
+ 0 1 0			!(001)[1-10]	inverse=-1
+ 0 0 1 
+
+ 0 0 1
+ 1 0 0			!(100)[011]	inverse=1
+ 0 1 0
+
+ 0 0 1
+-1 0 0			!(100)[01-1]	inverse=-1
+ 0 1 0
+
+ 1 0 0 
+ 0 0 1 			!(010)[101]	inverse=1
+ 0 1 0
+
+-1 0 0
+ 0 0 1 			!(010)[10-1]	inverse=-1
+ 0 1 0
+
+!Fichier contenant les matrices de rotations pour les systemes 1/2<110>{-110} et 1/2<110>{100} de MGO
+!Amodeo Jonathan, 13/11/07
+

@@ -1,0 +1,26 @@
+#! /bin/bash
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathsrc="$pathdd/src"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+
+
+
+if ! cd $pathbin ; then  echo -e "\a\n\n Impossible d'ouvrire $pathbin " ; exit ; fi
+pwd
+
+rm confinit 
+
+make confinit
+
+./confinit
+
+
+
+
+

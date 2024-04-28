@@ -1,0 +1,19 @@
+1         Nsystem_par     : Number of different population of particles to generate
+
+1         nsyspar         : Index of the particles population
+F         testpar         : A key to generate only one particle at the center of the simulation (T)
+8         seed            : seed of the random generator for particules position
+5E+17     number_Density  : Density of particles (m-3)
+500       D               : size (diameter) of the particle family en nm
+-2        tauc_par        : maximum resistance stress (GPa). CONVENTION :if negative means Orowan
+600       perco           : minimal distance between the centres of particlues (nm)
+
+
+------------------------------------------------
+This input file defined the mM parameters to take into account population(s) of particles in the simulated volume.
+This file is needed when the simulation is run in mode SiDeja = 2.
+When Nsystem_par /= from 0, a "dd/in/particules" file is made at the beginning of the simulation. This file
+contains all the information relative to the particle microstructure.
+When SiDeja = 2 and NsyNsystem_par = 0, a pre-existing "dd/in/particules" is used by mM.
+
+

@@ -1,0 +1,46 @@
+#! /bin/bash
+
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathsimu="$pathdd/src/simu"
+export pathgraph="$pathdd/src/graph/GraphicsDec"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export pathoutils="$pathdd/src/outils"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+
+
+if ! cp $pathsrc/outils/configcoin.f90 $pathtemp/configcoin.f90 ; then  echo -e "\a\n\n Impossible de copier $pathoutils/configcoin.f90 " ; exit ; fi
+
+cp $pathin/INPUTCONFIG.HC $pathtemp/INPUTCONFIG.HC
+
+
+if ! cd $pathtemp ; then  echo -e "\a\n\n Impossible d'ouvrire $pathtemp " ; exit ; fi
+
+		echo -en "\n\n compilation de configcoin ..........:    "
+
+if ! f90 -C -o frankreadcoin configcoin.f90; then  
+		echo -e "\a Compilation avortee, Desole"
+		echo -e "\a\n Supression des anciens executables "
+		rm -f configcoin
+		rm -f $pathbin/frankread
+		exit
+else
+		echo -e " REUSSI, Bravo \n\n"
+		cp frankreadcoin $pathbin/frankreadcoin
+		chmod +x frankreadcoin
+		chmod +x $pathbin/frankreadcoin
+		echo -e " EXECUTION du programme redirige\n\n"
+		echo -e " frankreadcoin < INPUTCONFIG.HC ..........\n\n"
+		if $pathtemp/frankreadcoin < INPUTCONFIG.HC; then
+				echo -e " pas de lancement lancement du gmicromegas"
+		else
+				exit
+		fi
+fi
+
+
+

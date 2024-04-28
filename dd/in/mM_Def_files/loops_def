@@ -1,0 +1,21 @@
+1       Nsystem_DL      ! Number of dislocation loop (DL) systems
+325     seed            ! seed of the random generator used for loops center coordinates
+
+F       testDL          ! T create one loop in the center of the box
+7       sys1            ! index of the vector in BVD forming the 1st side of the prismatic square loop
+11      sys2            ! index of the vector in BVD forming the 2nd side of the prismatic square loop
+50.     sizeDL          ! size of the DL in nm
+1.E+18  number_Density  ! number density in m-3
+
+F       testDL          ! T create one loop in the center of the box
+18      sys1            ! index of the vector in BVD forming the 1st side of the prismatic square loop
+31      sys2            ! index of the vector in BVD forming the 2nd side of the prismatic square loop
+5.      sizeDL          ! size of the DL in nm
+1.E+19  number_Density  ! number density in m-3
+
+
+Ce fichier sert a fabriquer le fichier particules qui contient les donnees
+relatives aux particules presente dans la boite de simulation.
+
+
+

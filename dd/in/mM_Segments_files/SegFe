@@ -1,0 +1,81 @@
+ 0 1 1 1 1 0 0 1 1 0 1 1
+                    48
+                139968                163296                188568
+     1     83592     79704    145800  972      5      0      0      0      0  F      0  0
+     2      9720     40824     71928  972      9      0      0      0      0  F      0  0
+     3     99144      1944    134136  972     21      0      0      0      0  F      0  0
+     4     99144      7776     34992  972     29      0      0      0      0  F      0  0
+     5     54432     77760     75816  972     37      0      0      0      0  F      0  0
+     6     75816      5832     93312  972     45      0      0      0      0  F      0  0
+     7     34992    110808      7776  972     49      0      0      0      0  F      0  0
+     8      7776     34992    182736  972     57      0      0      0      0  F      0  0
+     9     85536    141912    141912  972     69      0      0      0      0  F      0  0
+    10     13608    108864      5832  972     77      0      0      0      0  F      0  0
+    11     77760     52488     38880  972     85      0      0      0      0  F      0  0
+    12      5832     33048    151632  972     89      0      0      0      0  F      0  0
+    13     27216     42768     25272  972      1      0      0      0      0  F      0  0
+    14     13608    120528    153576  972      9      0      0      0      0  F      0  0
+    15     13608     85536     91368  972     21      0      0      0      0  F      0  0
+    16     48600     29160    106920  972     25      0      0      0      0  F      0  0
+    17     11664     13608    182736  972     37      0      0      0      0  F      0  0
+    18    120528    147744     99144  972     45      0      0      0      0  F      0  0
+    19     68040    153576    130248  972     53      0      0      0      0  F      0  0
+    20     75816    104976    128304  972     61      0      0      0      0  F      0  0
+    21     15552    112752     73872  972     65      0      0      0      0  F      0  0
+    22     91368     23328     25272  972     73      0      0      0      0  F      0  0
+    23     81648     60264    153576  972     81      0      0      0      0  F      0  0
+    24     21384    157464    134136  972     93      0      0      0      0  F      0  0
+    25    118584    104976    159408  972      5      0      0      0      0  F      0  0
+    26     34992     83592     69984  972      9      0      0      0      0  F      0  0
+    27     75816     13608     73872  972     17      0      0      0      0  F      0  0
+    28     40824    116640     48600  972     29      0      0      0      0  F      0  0
+    29     68040     64152     19440  972     37      0      0      0      0  F      0  0
+    30     93312    112752     68040  972     41      0      0      0      0  F      0  0
+    31     42768         0    106920  972     49      0      0      0      0  F      0  0
+    32    114696    101088     29160  972     61      0      0      0      0  F      0  0
+    33     11664    130248    161352  972     65      0      0      0      0  F      0  0
+    34     91368     81648     13608  972     73      0      0      0      0  F      0  0
+    35     62208    126360     71928  972     81      0      0      0      0  F      0  0
+    36    130248     60264     31104  972     93      0      0      0      0  F      0  0
+    37     23328     81648     68040  972      5      0      0      0      0  F      0  0
+    38         0    155520     50544  972      9      0      0      0      0  F      0  0
+    39     19440    134136     68040  972     21      0      0      0      0  F      0  0
+    40      5832    161352    169128  972     29      0      0      0      0  F      0  0
+    41     99144     50544    132192  972     37      0      0      0      0  F      0  0
+    42     79704     91368     97200  972     45      0      0      0      0  F      0  0
+    43     62208     27216    155520  972     53      0      0      0      0  F      0  0
+    44     91368     38880    143856  972     61      0      0      0      0  F      0  0
+    45    118584     97200     11664  972     69      0      0      0      0  F      0  0
+    46     56376    145800     46656  972     73      0      0      0      0  F      0  0
+    47    108864    112752     89424  972     85      0      0      0      0  F      0  0
+    48    134136         0    155520  972     93      0      0      0      0  F      0  0
+ ------------------------------------------------------------------
+ ------------------------------------------------------------------
+The segment file structure :
+
+Line 1: An integer for each slip system is defined to change the Schmid factors of slip systems
+(1 means that any change is made, 0 means that the Schmid's factor is artificialy set to zero)
+
+line 2: The number of segments
+
+line 3: dimensions of the simulation reference volume
+
+Form line 3 to doted lines: the segments description
+column 1 - The segment index
+column 2 - x coordinate of the segment origin
+column 3 - y coordinate of the segment origin
+column 4 - y coordinate of the segment origin
+column 5 - length of the segment in BVD vector
+column 6 - index of BVD vector for the segment
+column 7 - first neighbor segment at the origin side (zero for pining point)
+column 8 - first non zero length neighbor segment at the origine side (idem)
+column 9 - first neighbor segment at the extremity side (idem)
+column 10- first non zero length neighbor segment at the extremity side (idem)
+column 11- Flag for junction segment
+column 12- index of the junction binome segment
+column 13- Flag for screw segment in cross-sliped state (blocked at the intersection
+           of two glide planes)
+
+Please, note that the index of column 7 to 10 should be negative in starting files.
+Negative index, means that segments connectivity must be checked and where needed 
+additional kneecaps will be added before the first simulation step.

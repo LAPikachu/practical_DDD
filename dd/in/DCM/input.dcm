@@ -1,0 +1,16 @@
+Statement of the three files needed to run a microMegas simulation.
+These input files must be declared in this directory "in"
+They are used at the begining of the simulation
+and correspond to a simple classification.
+
+The sequence order must be respected, but the files name can be modified:
+>>> The material variables file
+>>> The control parameters file
+>>> The intial dislocation segments configuration
+>>> The control parameter file for MDC simulations
+
+Your selection must be defined just below this line (see the Cu bench test)
+---------------------------------------------------------------------------
+DCM_Cu
+DCM_ContCu
+SegCu

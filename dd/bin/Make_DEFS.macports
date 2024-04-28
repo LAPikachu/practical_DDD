@@ -1,0 +1,26 @@
+#####################################################################################e
+# Header for the computers platforms                                                  #
+#                                                                                     #
+#  -->    MacPorts  MacPorts  MacPorts   MacPorts   MacPorts   MacPorts               #
+#                                                                                     #
+# Here assumption is made that a symbolic link (ln -s) was created in /opt/local/bin  #
+# pointing on the compilers you wants to use.                                         #
+#######################################################################################
+
+CC=/opt/local/bin/gcc
+FC=/opt/local/bin/gfortran
+MPIFC=/opt/local/bin/mpif90 -bind_at_load
+
+OMP=-fopenmp
+OPTIM= -O3
+MODULEOPT=-J
+
+#CFLAGS= -Wall -L/usr/X11R6/lib
+#FFLAGS= -Wall -fcheck=all -ffpe-trap=zero,invalid,overflow -ftree-vectorize -L/usr/include/X11
+CFLAGS= -L/usr/X11R6/lib
+FFLAGS= -ftree-vectorize -L/usr/X11R6/lib
+
+CGRAPHLIB  = -L/usr/X11/lib -lX11 -lgfortran
+COLORSFILE = BlackBG_mac
+MKL_LIBS   = -L/opt/local/lib -llapack -lcblas
+

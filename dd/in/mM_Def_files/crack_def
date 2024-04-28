@@ -1,0 +1,10 @@
+##########################################################
+# This is a file for specific crack definition and control
+##########################################################
+! --------
+0        2008       2408    CrackTip             Crack tip Coordinates (x coordinates does not matter (quasi 3d along x))
+1                           fact_type            Geometrical factor method
+2770                        acrack               Crack length
+5104                        plate_H              Plate HALF height
+11080                       plate_W              Plate weigth
+! --------

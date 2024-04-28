@@ -1,0 +1,14 @@
+#!/bin/csh
+if ($#argv == 1) then
+	cd ../manips/$1
+	gunzip *
+	cp *.txt ../../exec/.
+        cp *.micmeg ../../in/.
+	cp * ../../out/.
+	gzip *
+	cd ../../exec
+else
+	echo Wrong Argument Specification
+	echo usage : load_manip filename
+endif 
+

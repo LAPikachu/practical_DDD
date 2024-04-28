@@ -1,0 +1,19 @@
+3.0         taille_boite    ! linear dimension of the simulated cubic volume in microns
+1.0         taille_source   ! Length of the two initial sources
+10          decoup          ! maximum number of segments used to discretize sources
+
+9           decalage        ! initial shift between the two sources centers
+
+1           sys1            ! slip system for source 1
+11          sys2            ! slip system for source 2
+
+179.6       Phi1_Start      ! initial angle between junction and source 1 direction (phi1 in degree)
+-179.3      Phi1_End        ! final angle between junction and source 1 direction (phi1 in degree)
+
+178.7       Phi2_Start      ! initial angle between junction and source 2 direction (phi2 in degree)
+-178.2      Phi2_End        ! final angle between junction and source 2 direction (phi2 in degree)
+
+1           tolerance        ! tolerate error on the angle calculation (in degree)
+
+25          echan1          ! nb of configuration for source 1 tested in is angle domain.
+25          echan2          ! nb of configuration for source 1 tested in is angle domain.

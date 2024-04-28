@@ -1,0 +1,56 @@
+This is the directory where the output files of the simulations codes are written.
+
+-> "BVD.xxx" contains the set of reference vectors used in the simulation for a given crystal.
+   More precisely we find:
+on the first line:
+ the total number of elementary segments type - the size of the simulation lattice parameter defined by "echelle", the simulation reference scale
+on the folowing lines:
+ the segment type number - the segment elementary direction - the segment elementary displacement direction - the segment slip plane normal
+
+
+-> "bigsave.bin" a binary file containing everything needed to restart a simulation if accidentally stopped
+
+
+-> "film" a binary file where the coordinates of segments are periodically saved to buildup a trajectory file
+
+
+-> "gamma" evolution of gamma for all existing slip systems.
+   More precisely we find in each columns of this file
+ epsilon in the loading axis direction - abs(gamma_sys-1) - abs(gamma_sys_2) - ... - abs(gamma_sys_i) ...
+
+
+-> "gammap" evolution of the instantaneous gamma dot for all the slip systems
+   More precisely we find in each columns of this file
+ epsilon in the loading axis direction - abs(gamma_dot_sys-1) - abs(gamma_dot_sys_2) - ... - abs(gamma_dot_sys_i) ...
+
+
+-> "rau" evolution of rho, the dislocation density, for all the slip systems
+   More precisely we find in each columns of this file
+ epsilon in the loading axis direction - rho_sys_1 - rho_sys_2 - ... - rho_sys_i
+
+
+-> "raujonc" evolution of the jonction density and number for all slip systems
+   More precisely we find in each columns of this file
+ epsilon in the loading axis direction - rho_jonc_sys_1 - rho_jonc_sys_2 - ... - rho_jonc_sys_i ... - number_jonc_sys_1 - number_jonc_sys_2 - ...number_jonc_sys_i ...
+
+
+-> "stat" where most of the global statistics of the simulation are written
+   More precisely we find in each columns of this file:
+ number of steps - epsilon in the loading axis direction - largest value of tau - total dislocation density - instantaneous strain rate -      &
+ total area swept by screw dislocation - total area swept by non screw dislocation - total density of dislocation with velocity law number 1   &
+ total density of dislocation with velocity law number 2 - total number of junction segments ( = 2x number of junction) -                      &
+ total number of cross-sliped segment (= 2x number of cross-slip events)
+
+-> "sigeps" a compagnon file to "stat"
+   More precisely we find in each columns of this file:
+ Sigma in the loading axis direction - epsilon in the loading axis direction - the square root of the total dislocation density -     &
+ alpha the forest coefficient - Axe_x , Axe_y , Axe_z (the loading axis direction) - time
+
+-> "travapp" and "travint" evolution of the applied and internal mechanical work (presently do not trust those computations)
+
+-> resul files (resul, resul_MDC, resul_gm) are script files which can be used with gnuplot to easily visualizeresults of mM simulations
+
+-> View settings in paraview. see the doc file f2pcolorscales
+
+******
+for more information on this output files, please take a look to the "13resul.F90" source in the "src/simu" directory

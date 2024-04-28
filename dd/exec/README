@@ -1,0 +1,6 @@
+This directory is dedicated to simple scripts that can make life much more easy.
+They are not at all needed, but some of us found usefull to define the "bin" and "exec" directories
+in their PATH. With such a trick, you can run automatic and recurent procedures from everywhere.
+
+Some oldies are provided as exemples (they may not work anymore).
+You can easily develop yours and feel free to share then if they can be usefull to others.

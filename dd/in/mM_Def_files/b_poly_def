@@ -1,0 +1,10 @@
+Tesselation parameters
+
+##############################
+100                    the variable named longminseg gives the minimum lenght to discretize segments stopped on barriers (minimum lenght->modur/longminseg)
+F	                     Desorientation key: TRUE means activation of euler angles (file (eulerangle)
+4992                   Box Size (X=Y=Z) en a
+16                     Grain number (2 or 16)
+POSdeux                COnstant array corresponding to the grain number
+                       -POSun for system with 2 grains
+                       -POSdeux for system with 16 grains

@@ -1,0 +1,56 @@
+1           SiDeja            Simulation status: 0=New ; 1= restart ; 2= with particles (bi phased material)
+0           Mode_deformation  0=strain rate; 1=make carto; 2=run carto; 3=stress rate; 4=cst stress; 5=fatigue; 6=metalofute; 7=metalofute2; 8=FE mesh load; 9=creep
+
+13.5        Echelle           Reference scale, i.e. size of elementary screw vectors in BVD.XXX (Burgers vector unit)
+
+T           Shear             True : shear stress resolved on the slip system with highest Schmid factor; False = uniaxial stress
+4.0         Sigma0            Initial stress (MPa)
+5.0D-11     deltat0           Elementary time step (s)
+0.          SigmaPoint        Elementary stress increments (MPa s-1)      (mode_deformation=3,6,7)
+0.00001     EpsilonPoint      Imposed strain rate (s-1)                   (mode_deformation=0,5,6,7,9)
+1.5         RAID              Apparent Young modulus                      (mode_deformation=0,5,6,7)
+3.0D-5      EPSMAX            Maximum plastic strain per cycles           (mode_deformation=5)
+1.D0        FSIG              loading sign for the first cycle            (mode_deformation=5)
+
+1           LINTEN            Local line tension definition:  0->Friedel;    1->DeWit;   2->Foreman;    3->Tabulated;  4->Mohles
+T           GLDEV             Cross slip activation key : True = cross-slip active
+F           key_nucleation    Nucleation activation key : True = nucleation active (control parameters are found the in nucl_init file )
+F           key_infline       PBC induced infinite lines : True = infinite lines are always pinned at least at a point in the volume
+F           key_crack         Add the stress field of a sharp crack in the simulated volume  (T/F=on/off)
+
+1 0 1       Tensile_axis      Tensile or compression uniaxial test direction (Miller indices)
+1200.        Temperature       Temperature (Kelvin)
+100         Facteur_Depmax    Maximum segment displacement in a simulation step (Burgers vector unit)
+
+50          NstatControl      Number of steps accounted for in the simulation control procedure (mode_deformation = 0,5,6,7)
+
+0           relax_TL          Number of steps ascribed to initial relaxation when involving line tension only
+100         relax_INT         Number of steps ascribed to initial relaxation under no applied load and with no contact reactions allowed
+100         relax_reac        Number of steps ascribed to initial relaxation under no applied loading
+1000000     NSTEP             Number of steps of simulation
+
+0.15        Ldis_act          Segment length (micron) at which line discretization is systematically tested  (micron).
+0.4         Ldis_nact         Same as above for segments belonging to an inactive slip systems (micron).
+
+10          Period            Number of steps before force on waiting (quasi-immobile) segments is recalculated
+10          KRC               Number of waiting steps before long-range contribution to internal stress is recalculated (if Greengard method used)
+-1.0        L_Boite           Linear mean size of domains defined used in Greengard's method (micron), it is dynamically defined when negative
+0 0 0       PBCI_DIM          Number of replicas used in Greengard method (in x,y and z directions), symmetric long rang solution is imposed if negative
+5.0         AB_LENGTH_SEUIL   Maximum segment length neglected in the long range contribution (if Greengard method used) (Echelle unit see line 3)
+
+50          DCFJ              Maximum Distance at which stress is calculated on the segments connected to a junction (unit: Burgers vector)
+
+0           GB                interface and surface definitions: 0-> inactivates, 1-> domain definition, 2->spherical, 3->regular 3D network (polycristal)
+
+100         TauINT_LIMITE     Critical stress at which segments are considered as in a singular field (MPa)
+
+1000        KISAUVE           Write periodicity of segment configurations and information needed to restart computation
+100         KSTATS            Write periodicity of results
+200         KKIM              Write periodicity of the trajectory film
+
+100         KPREDRAW          Periodicity of refreshment of the graphical interface in gmm mode
+
+0           shift_rotation    Key for translation and rotation of the simulated volume (see the shift_rotation file)
+
+-6542       iterinfo          Step of debugging (no debugging if negative)
+-2          sysinfo           Slip system of interest in debugging procedure (needed in simulations with many segments)

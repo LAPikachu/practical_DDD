@@ -1,0 +1,30 @@
+0.2D-7
+16000
+50
+1
+T
+3632
+4016
+4816
+0 0 0
+1
+100000
+397
+
+!#########################################################################################################
+! The input parameters for the nucleation procedure are respectively:
+deltat_newloop    = New loop nucleation time test periodicity
+loopcritR         = Initial critical loop radius (A unit)
+Delta_loopcritR   = Loop radius increment after a large number of unsuccessful nucleation events
+nbregion          = Number of region to include/exclude for nucleation
+inoroutside       = Logical for region definition (true = if inside, false = outside)
+h_boxx            = Size of the region in X direction where nucleation events are tested
+h_boxy            = Size of the region in Y direction where nucleation events are tested
+h_boxz            = Size of the region in Z direction where nucleation events are tested
+box_position      = Origin of the box where nucleation events are tested
+nloop             = Number of new loops to consider at each nucleation iteration
+kunsuccess_max    = Maximum number of iterations for nucleation try at a given loop size
+seedns		        = seed size for nucleation
+###
+### WARNING: Requires nbregions time the variables inoroutside, h_boxx, h_boxy, h_boxz, and box_position
+#########################################################################################################

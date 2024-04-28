@@ -1,0 +1,20 @@
+2           Number of segment to consider (1 or 2)
+10.0        Size of the simulated volume in X direction
+10.0        Size of the simulated volume in Y direction
+10.0        Size of the simulated volume in Z direction
+
+3           carac1 : Direction of the segment 1 (index in the BVD.xxx)
+5.0         taux1  : size of the segment 1 (micron)
+10          npas1  : Shift between the segment and simulation box centers
+0           decal1 : additional shift parallel to the segment direction in %
+1           solli1 : Schmid ponderation factor
+
+25          carac2 : Direction of the segment 2 (index in the BVD.xxx)
+5.0         taux2  : size of the segment 2 (micron)
+0           npas2  : hift between the segment and simulation box centers
+0           decal2 : additional shift parallel to the segment direction in %
+1           solli2 : Schmid ponderation factor
+
+This input file is used to automatically generate configuration with 1 or 2 segments
+at the center of a simulation box. This mM functionality is activated when the number
+of segments (NSEGM) set in the segment input file is zero.

@@ -1,0 +1,3 @@
+> Test reading film.bin with f2py.
+> First compile the program with './compile.sh' : A module 'film.so' should have been created
+> Test it with 'python itest.py'

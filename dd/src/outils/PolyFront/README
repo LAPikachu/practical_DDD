@@ -1,0 +1,10 @@
+The PolyFrontApp prog is an application made by
+Ronan Madec (CEA France) to evaluate the dimension
+of dislocation glide plane in periodic volumes for
+the mM simulation code.
+
+Compilation of the PolyFrontApp is made with the
+procedure:
+
+POLYFRONT/Comp_PolyFront NameOfFortranCompiler
+

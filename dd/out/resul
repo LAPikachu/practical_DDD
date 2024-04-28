@@ -1,0 +1,76 @@
+#
+# This file is an example of script you can use to simply look at the "mM" outputs files
+# To use such type of script you need "gnuplot", then simply type "gnuplot resul"
+#
+# You want to see results in ASCII form
+set term x11
+# set term dumb
+# You want the outputs in a postscript file named "resu.ps"
+#set term postscript
+#set output "resu.ps"
+set autoscale
+
+
+set title " Applied sigma (epsilon_tot %) in MPa"
+plot 'graph.txt' using 2:4 notitle w l
+pause -1 " 0) Applied sigma (epsilon_tot %) "
+
+set title " Applied tau (gamma %) in MPa"
+plot 'graph.txt' using 5:6 notitle w l
+pause -1 " 1) Applied tau (gamma %) "
+
+set title " rho_tot (epsilon_plas %)"
+plot 'graph.txt' using 3:8 notitle w l
+pause -1 " 2) Dislocations density (epsilon_plas %) "
+
+set title " Taylor coefficient (epsilon_plas %)"
+plot 'graph.txt' using 3:9 notitle w l
+pause -1 " 3) Taylor coefficient (epsilon_plas %) "
+
+set title " Instantaneous epsilon_plas dot (steps)"
+plot 'graph.txt' using 1:7 notitle w l
+pause -1 " 4) Instantaneous epsilon_plas dot (steps) "
+
+set title " Slip systems density (epsilon_plas %) "
+plot 'rau.txt' using 1:3 t '1_Rho' w l lt 1, 'rau.txt' using 1:4 t '2_Rho' w lp lt 1,'rau.txt' using 1:5 t '3_Rho' w l lt 2,'rau.txt' using 1:6 t '4_Rho' w lp lt 2,'rau.txt' using 1:7 t '5_Rho' w l lt 3,'rau.txt' using 1:8 t '6_Rho' w lp lt 3,'rau.txt' using 1:9 t '7_Rho' w l lt 4,'rau.txt' using 1:10 t '8_Rho' w lp lt 4,'rau.txt' using 1:11 t '9_Rho' w l lt 5,'rau.txt' using 1:12 t '10_Rho' w lp lt 5,'rau.txt' using 1:13 t '11_Rho' w l lt 6,'rau.txt' using 1:14 t '12_Rho' w lp lt 6, 'rau.txt' using 1:2 t 'Rho_long_seg' w l lt 7
+pause -1 " 5) Slip systems density (epsilon_plas %) "
+
+set title " Slip systems gamma (epsilon_plas %) "
+plot 'gamma.txt' using 1:2 t '1_Gam' w l lt 1 ,'gamma.txt' using 1:3 t '2_Gam' w lp lt 1 ,'gamma.txt' using 1:4 t '3_Gam' w l lt 2,'gamma.txt' using 1:5 t '4_Gam' w lp lt 2,'gamma.txt' using 1:6 t '5_Gam' w l lt 3,'gamma.txt' using 1:7 t '6_Gam' w lp lt 3,'gamma.txt' using 1:8 t '7_Gam' w l lt 4,'gamma.txt' using 1:9 t '8_Gam' w lp lt 4,'gamma.txt' using 1:10 t '9_Gam' w l lt 5,'gamma.txt' using 1:11 t '10_Gam' w lp lt 5,'gamma.txt' using 1:12 t '11_Gam' w l lt 6,'gamma.txt' using 1:13 t '12_Gam' w lp lt 6
+pause -1 " 6) Slip systems gamma (epsilon_plas %) "
+
+set title " Slip systems density of junctions (epsilon_plas %) "
+plot 'raujonc.txt' using 1:2 t '1_Rho_j' w l lt 1, 'raujonc.txt' using 1:3 t '2_Rho_j' w lp lt 1,'raujonc.txt' using 1:4 t '3_Rho_j' w l lt 2,'raujonc.txt' using 1:5 t '4_Rho_j' w lp lt 2,'raujonc.txt' using 1:6 t '5_Rho_j' w l lt 3,'raujonc.txt' using 1:7 t '6_Rho_j' w lp lt 3,'raujonc.txt' using 1:8 t '7_Rho_j' w l lt 4,'raujonc.txt' using 1:9 t '8_Rho_j' w lp lt 4,'raujonc.txt' using 1:10 t '9_Rho_j' w l lt 5,'raujonc.txt' using 1:11 t '10_Rho_j' w lp lt 5,'raujonc.txt' using 1:12 t '11_Rho_j' w l lt 6,'raujonc.txt' using 1:13 t '12_Rho_j' w lp lt 6
+pause -1 " 7) Slip systems density of junctions (epsilon_plas %) "
+
+set title " Number of jonc & CS (epsilon_plas %)"
+plot 'stat.txt' using 1:2 t "Jonc_seg" w l,'stat.txt' using 1:3 t "CS_seg" w l
+pause -1 " 8) Number of jonc & CS  (epsilon_plas %) "
+
+set title " Mean screw and non-screw swept area (steps)"
+plot 'stat.txt' using 5 t "screw" w l, 'stat.txt' using ($6+$7) t "non-screw" w l
+pause -1 " 9) Mean screw and non-screw swept area (steps)"
+
+set title " Fraction of loops, inf lines and free inf lines (epsilon_plas %) "
+plot [] [-0.1:*] "< paste stat.txt graph.txt" using 1:($14/($30+1.)) t "loops" w lines, "< paste stat.txt graph.txt" using 1:($15/($30+1.)) t "inf" w lines, "< paste stat.txt graph.txt" using 1:($16/($30+1.)) t "free inf" w points
+pause -1 " 10) Fraction of loops, inf lines and free inf lines (epsilon_plas %) "
+
+set title " Number of loops and free inf lines (steps) "
+plot [] [-0.1:*] 'stat.txt' using 17  t 'loops' w points,'stat.txt' using 18 t 'inf lines' w points
+pause -1 " 11) Number of loops and free inf lines (steps)"
+
+set title " Density of dislocations with velocity law 1 and 2 (epsilon_plas %) "
+plot 'stat.txt' using 1:8 t "Rho_Mob_1" w l, 'stat.txt' using 1:9 t "Rho_Mob_2" w l
+pause -1 " 12) Density of dislocations with velocity law 1 and 2 (epsilon_plas %) "
+
+set title " Percentage of kneecaps (epsilon_plas %)"
+plot 'stat.txt' using 1:4 notitle w l
+pause -1 " 13) percentage of kneecaps  (epsilon_plas %) "
+
+set title " Percentage of GD1, GD2 (epsilon_plas %)"
+plot 'stat.txt' using 1:19 t "GD1" w l, 'stat.txt' using 1:20 t "GD2" w l
+pause -1 " 14) Percentage of GD1, GD2 (epsilon_plas %) "
+
+set title " loading axis (epsilon_plas %) "
+plot 'graph.txt' using 3:10 t "X" w l,'graph.txt' using 3:11 t "Y" w l, 'graph.txt' using 3:12 t "Z" w l
+pause -1 " 15) loading axis (epsilon_plas %) "

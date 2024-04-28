@@ -1,0 +1,43 @@
+#! /bin/bash
+
+export pathdd=".."
+export pathtemp="$pathdd/temp"
+export pathsrc="$pathdd/src"
+export pathbin="$pathdd/bin"
+export pathexe="$pathdd/exec"
+export manip="$pathdd/manip"
+export pathin="$pathdd/in"
+
+
+
+
+if ! cd $pathsrc ; then  echo -e "\a\n\n Impossible d'ouvrire $pathsrc " ; exit ; fi
+pwd
+cp outils/config.f90 $pathtemp/config.f90 
+cp $pathin/INPUTCONFIG.HC $pathtemp/INPUTCONFIG.HC
+
+
+if ! cd $pathtemp ; then  echo -e "\a\n\n Impossible d'ouvrire $pathtemp " ; exit ; fi
+
+echo -en "\n\n eliminations du fichier segs dans ../out    "
+rm -f ../in/New-segs
+
+		echo -en "\n\n compilation de frankreadHC ..........:    "
+
+if ! pgf90 -C -o frankreadHC config.f90; then  
+		echo -e "\a\n\n Compilation avortee, Desole"
+		echo -e "\a\n\n Suprition des anciens executables "
+		rm -f frankreadHC
+		rm -f $pathbin/frankreadHC
+else
+		echo -e "\ REUSSI, Bravo \n\n"
+		cp frankreadHC $pathbin/frankreadHC
+		chmod +x frankreadHC
+		chmod +x $pathbin/frankreadHC
+		echo -e " EXECUTION du programme redirige\n\n"
+		echo -e " frankreadHC < INPUTCONFIG.HC ..........\n\n"
+		frankreadHC < INPUTCONFIG.HC
+fi
+
+
+

@@ -1,0 +1,9 @@
+0.67          Uform     :: vacancy formation energy (ev)
+0.61          Umig      :: vacancy migration energy (ev)
+1.51D-5       Dv0       :: diffusivity at T = 0K    (m**2/s)
+1.            satfac    :: saturate concentration of vacancies
+16.3D-30      Omega     :: atomic volume  (m**3)
+10.0          lnrrc     :: logarithm term appearing in the climb velocity equation
+
+------------------------------------------------
+This input file defined the mM parameters needed to calculate climb velocity in creep simulations.
