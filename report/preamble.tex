@@ -1,0 +1,129 @@
+\documentclass{scrartcl} % KOMA Dokumentenklasse mit DIN-Papier als Standard
+\usepackage[a4paper]{geometry} % Paket zur flexiblen Anpassung des Seitenlayouts
+\savegeometry{default}
+\usepackage[autooneside=false]{scrlayer-scrpage} % Paket zur flexiblen Anpassung der Kopf- und Fußzeilen
+%
+%\usepackage[tocindentauto]{tocstyle} % Paket zur flexiblen Anpassung der Formatierung des Inhaltsverzeichnisses (wird hier nur benötigt, weil einmalig die Nummerierung auf römische Zahlen umgestellt wurde)
+ %\usetocstyle{KOMAlike}
+%
+\usepackage[english]{babel} % Sprachenpaket zur Anpassung der Standardausgaben von bestimmten Schlüsselwörtern und Aktivierung der deutschen Silbentrennung
+%
+\usepackage{miller}%to intuitively display miller indices%
+
+\usepackage{parskip} %gets rid of hbox warning - just add empty lines to imply linebreaks
+
+\usepackage[utf8]{inputenc} % Kodierungspaket zur Festlegung, wie die eingegebenen Zeichen (Code hier im Dokument) interpretiert werden sollen
+%
+\usepackage{csquotes}
+
+\usepackage[T1]{fontenc} % Kodierungspaket zur Festlegung, wie die ausgegebenen Zeichen (Buchstaben im PDF-Dokument) implementiert werden sollen
+%
+\usepackage{lipsum} % Paket zur Einbindung von lateinischen Blindtexten
+%
+\usepackage{multicol} % Paket zur flexiblen Erstellung mehrspaltiger Texte und zum Zusammenfassen von Spalten in Tabellen
+%
+\usepackage{ragged2e} % Paket zur Verbesserung der Darstellung von linksbündigem, rechtsbündigem und zentriertem Text (erlaubt Silbentrennung)
+%
+\usepackage{quoting} % Paket zur ansprechenden Darstellung von Zitaten
+%
+\usepackage[marginal,norule]{footmisc} % Paket zur flexiblen Anpassung der Formatierung von Fußnoten
+%
+\usepackage{listings} % Paket zur vereinfachten Einbindung und zur ansprechenden Darstellung von Code in beliebigen Programmiersprachen
+%
+\usepackage[section, below]{placeins}
+%\usepackage[section]{placeins}
+%
+%
+\usepackage{microtype} % Paket zur Verbesserung der Mikro-Typographie durch Anpassung von Zeilenenden und sinnvollen Reduzierung von Silbentrennungen
+\usepackage{lmodern} % Schriftenpaket für Latin Modern Schriften (beliebig skalierbare, richtig implementierte Vektorschriften)
+%\renewcommand{\rmdefault}{lmss} %to use sans serif by default
+\usepackage{textcomp} % Paket zur Erweiterung von verfügbaren Sonderzeichen (Copyright, Trademark, ...)
+%
+\usepackage{textgreek} %to use greek letters in text
+%
+\usepackage{amsmath} % Extrem umfassendes Mathematik-Paket der American Math Society
+% allow for wider matrices
+\newcommand{\tens}[1]{\boldsymbol{\mathsf{#1}}}
+\setcounter{MaxMatrixCols}{20}
+\usepackage{mathtools} % Erweiterung des amsmath-Pakets (enthält amsmath-Paket)
+% Ergänzungen für Mathe:
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+%
+%
+% Anpassung von Klammern 
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+%
+%
+\usepackage{amsfonts} % Schriftenpaket der American Math Society zur Erweiterung der Schriften in Mathe-Umgebungen
+%
+\usepackage{amssymb} % Paket zur Erweiterung der verfügbaren Mathe-Symbole
+%
+\usepackage{MnSymbol} % Paket zur Erweiterung der verfügbaren Mathe-Symbole
+%
+\usepackage{graphicx} % Paket zur vereinfachten und flexiblen Einbindung von Grafiken (jpg, png, pdf)
+%
+\usepackage{pdfpages} % Paket zur vereinfachten und flexiblen Einbindung von mehrseitigen PDFs
+%
+\usepackage{chemformula} %Paket für chem. Formeln e.g. with \ce or \ch and stuff in brackets
+%
+\usepackage{xcolor} % Farbenpaket zur vereinfachten Einbindung und Anpassung von Farben
+%
+\usepackage{booktabs} % Paket zur Verbesserung der Darstellung von horizontalen Linien in Tabellen
+%
+\usepackage{multirow} % Paket zum Zusammenfassen von Zeilen in Tabellen
+%
+\usepackage{tikz} % Paket zur Erstellung von ansprechenden und anspruchsvollen Zeichnungen innerhalb von LaTeX
+%\usepackage{pgfplots} % Paket zur Erstellung von ansprechenden und anspruchsvollen Plots innerhalb von LaTeX
+%
+\usepackage[style=nature, backend=biber]{biblatex} % Paket zur vereinfachten und automatisierten Erstellung eines Literaturverzeichnisses aus einer externen Datenbank
+
+%
+\usepackage{xparse} % Paket zur Erweiterung der Funktionalitäten bei der Definition von neuen Befehlen und Umgebungen
+%
+\usepackage{hyperref} % Paket zur Erstellung und Anpassung von anklickbaren, intelligenten Querverweisen innerhalb des Dokuments und Hyperlinks (Weblinks, Maillinks, Filelinks)
+%
+%
+%
+%
+% Einstellungen für das Dokument:
+%
+ \KOMAoptions{headsepline, footsepline}
+ \setkomafont{headsepline}{\color{gray}}
+ \setkomafont{footsepline}{\color{gray}}
+ \setkomafont{pagehead}{\scshape}
+ \setkomafont{pagefoot}{} %\bfseries
+ \automark[subsection]{section}
+ \lohead{}
+ \cohead{\rightmark}
+ \rohead{}
+ \lofoot{}
+ \cofoot{\pagemark}
+ \rofoot{}
+%
+%
+\definecolor{meinSchwarz} {RGB} {0,0,0}
+%
+\hypersetup{linktoc = all, colorlinks ,  citecolor = meinSchwarz , linkcolor = meinSchwarz, urlcolor  = meinSchwarz , filecolor = meinSchwarz }
+%
+%\addto\extrasngerman{\def\figureautorefname{Abb.}}
+%
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5\baselineskip plus 0.2\baselineskip minus 0.1\baselineskip}
+\linespread{1.25}
+%
+\newcommand{\degcel}{\,\textcelsius{} }
+%
+% Angaben zu Variablen
+\graphicspath{{graphics}}
+\bibliography{master_thesis}
+%
