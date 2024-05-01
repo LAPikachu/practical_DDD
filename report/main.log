@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  18 APR 2024 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  1 MAY 2024 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2122,30 +2122,27 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 34
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
-
-LaTeX Warning: Empty bibliography on input line 37.
-
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-9.
+5.
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-9.
+5.
 
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/10
 .95'
-(microtype)             (new value: 10.95pt) on input line 39.
+(microtype)             (new value: 10.95pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/8'
 
-(microtype)             (new value: 8.0pt) on input line 39.
+(microtype)             (new value: 8.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/6'
 
-(microtype)             (new value: 6.0pt) on input line 39.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+(microtype)             (new value: 6.0pt) on input line 35.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
 
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -2154,7 +2151,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
 
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -2165,39 +2162,53 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/10.9
 5'
-(microtype)             (new value: 10.95pt) on input line 39.
+(microtype)             (new value: 10.95pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 39.
+(microtype)             (new value: 8.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 39.
+(microtype)             (new value: 6.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/10.9
 5'
-(microtype)             (new value: 10.95pt) on input line 39.
+(microtype)             (new value: 10.95pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 39.
+(microtype)             (new value: 8.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 39.
+(microtype)             (new value: 6.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/10.9
 5'
-(microtype)             (new value: 10.95pt) on input line 39.
+(microtype)             (new value: 10.95pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 39.
+(microtype)             (new value: 8.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 39.
+(microtype)             (new value: 6.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/10.9
 5'
-(microtype)             (new value: 10.95pt) on input line 39.
+(microtype)             (new value: 10.95pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/8'
-(microtype)             (new value: 8.0pt) on input line 39.
+(microtype)             (new value: 8.0pt) on input line 35.
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/6'
-(microtype)             (new value: 6.0pt) on input line 39.
+(microtype)             (new value: 6.0pt) on input line 35.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 \end{document}
-                    [1] (main.aux)
+l.35 \newpage
+              [1]
+<graphics/schematic_discretized_disloc_lines.png, id=37, 861.9703pt x 282.30469
+pt>
+File: graphics/schematic_discretized_disloc_lines.png Graphic file (type png)
+<use graphics/schematic_discretized_disloc_lines.png>
+Package pdftex.def Info: graphics/schematic_discretized_disloc_lines.png  used 
+on input line 67.
+(pdftex.def)             Requested size: 418.25368pt x 136.98653pt.
+ [2{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymbo
+lD.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/Mn
+SymbolE.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymb
+ol/MnSymbolC.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/l
+m/lm-rm.enc}] [3 <./graphics/schematic_discretized_disloc_lines.png>] (main.aux
+)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2209,22 +2220,30 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45252 strings out of 474542
- 893375 string characters out of 5744919
- 1929978 words of memory out of 5000000
- 66776 multiletter control sequences out of 15000+600000
- 607561 words of font info for 104 fonts, out of 8000000 for 9000
+ 45570 strings out of 474542
+ 899705 string characters out of 5744919
+ 1939978 words of memory out of 5000000
+ 67029 multiletter control sequences out of 15000+600000
+ 622537 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,20n,110p,11002b,1864s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
-><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsco10.pf
-b><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb>
-<C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C
-:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/
-Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (2 pages, 165387 bytes).
+ 113i,20n,110p,11002b,2056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSy
+mbol10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsy
+mbol/MnSymbol8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmbx12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmcsco10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmmi10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/lm/lmmi8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+lm/lmr10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm
+/lmr12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
+mr17.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10
+.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx1
+0.pfb>
+Output written on main.pdf (4 pages, 500517 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 26642 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 17 named destinations out of 1000 (max. 500000)
+ 34847 words of extra memory for PDF output out of 35830 (max. 10000000)
 

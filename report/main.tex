@@ -32,6 +32,42 @@
 \setcounter{page}{1}
 
 \tableofcontents
+\newpage
+
+\section{Introduction}
+The topic of this practical is to get an introduction into \textit{discrete dislocation dynamic} (DDD)  simulations. In the course of the following exercises the open-source software \textit{microMegas} (mM) is utilized \cite{devincre2011}.   
+
+As it is common for DDD simulation, three steps are carried out to model the dynamics of the dislocations:
+
+\begin{enumerate}
+	\item calculate the stress field 
+	\item calculate the Forces acting on the dislocation line segments (according to eq. \ref{eq:peach-koehler} - the Peach-Köhler equation)
+	\item moving the line segments accordingly - the velocities are calculated according to eq. \ref{eq:vleocities_mobility_func} and are moved following forward Euler (eq. \ref{eq:forward_euler})
+\end{enumerate}
+
+\begin{equation}
+	F = (\sigma_{ext}+\sigma_{int}) \mathbf{b}l  \label{eq:peach-koehler}
+\end{equation}
+
+The Peach-Köhler Equation (eq. \ref{eq:peach-koehler}) takes into account internal- \( \sigma_{int} \) and external stresses  \( \sigma_{ext} \) acting on dislocation segments of vector \(l\) with a burgers vector of \( \mathbf{b}\). In mM (and similar frameworks) \( \sigma_{ext}\) is imposed on the system as a parameter. 
+
+\begin{subequations}
+	\begin{align}
+		v =& M(F) \label{eq:vleocities_mobility_func} \\
+		r(t+\Delta t) =& r(t) + v(t)\Delta t \label{eq:forward_euler}
+	\end{align}
+\end{subequations}
+
+The velocities of the segments are a functional of the mobility function \(M(F)\) depending on the individual forces, the material and the orientation of the segment. The segments positions are calculated as a result of the the application of the forward Euler scheme - eq. \ref{eq:forward_euler}. The new position \( r(t+ \Delta t)\) after a time step of \(\Delta t\) is calculated as the position \(r(t)\) being moved according to its velocity \(v(t)\). For forward Euler being applicable we assume quasi-static deformation. 
+
+As a result of the forces imposed on a dislocation, the dislocation might curve. In mM this is achieved by cutting the curved line into several segments. These segments are discretized as depicted in fig. \ref{fig:schematic_segments_dislocs}. The choice to include 8 slip systems in mM was made as trade-off - balancing the increasing complexity with the best representation of the curved dislocation \cite{devincre2011}.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{schematic_discretized_disloc_lines.png}
+	\label{fig:schematic_segments_dislocs}
+	\caption{a) Schematic representation of the elementary vectors used per slip system to discretize dislocation lines in mMs. The vectors \(l_{1-8}\)(in black), are used for the deﬁnition of the segments directions and the vectors \(\mathbf{d}_{1-8}\)(in blue) for the corresponding displacement directions. b) and c) Geometrical procedures for the displacement of a segment and its length variation. b) The trapezoidal area swept by segment S2 during a time step \(\Delta t\)(in grey) produces and increment of plastic shear.This procedure accounts for the direction of the two neighbouring segments. c) Before the displacement, a local rule for connections imposes the presence of a "pivotal segment" \(S_{3}\) (segment of zero length) between segments \(S_{2}\) and \(S_{4}\) reproduced from \cite{devincre2011}.}
+\end{figure}
 
 %\listoffigures
 \printbibliography

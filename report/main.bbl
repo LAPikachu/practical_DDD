@@ -16,5 +16,50 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{devincre2011}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d6906dd135cf7c118c9340b8cd07514b}{%
+           family={Devincre},
+           familyi={D\bibinitperiod},
+           given={Benoit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=85fde09227c9ef0a54af335e9eb0d991}{%
+           family={Madec},
+           familyi={M\bibinitperiod},
+           given={Ronan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=11c85c77288f264e015b4ff75280966a}{%
+           family={Queyreau},
+           familyi={Q\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+        {{hash=08a5b910de7ccc53612891aac304c87b}{%
+           family={Kubin},
+           familyi={K\bibinitperiod},
+           given={Ladislas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e5ab49db81baf329d51c0bef7520783c}
+      \strng{fullhash}{511f8e56cb0274c8b49b6f52753e1575}
+      \strng{bibnamehash}{511f8e56cb0274c8b49b6f52753e1575}
+      \strng{authorbibnamehash}{511f8e56cb0274c8b49b6f52753e1575}
+      \strng{authornamehash}{e5ab49db81baf329d51c0bef7520783c}
+      \strng{authorfullhash}{511f8e56cb0274c8b49b6f52753e1575}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{day}{1}
+      \field{month}{1}
+      \field{shorttitle}{Modeling Crystal Plasticity with Dislocation Dynamcis Simulations}
+      \field{title}{Modeling Crystal Plasticity with Dislocation Dynamcis Simulations : The {{MICROMEGAS}} Code.}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
