@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  3 MAY 2024 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  3 MAY 2024 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1903,7 +1903,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 1: section
 1: section
 1: subsection
-Package hyperref Info: Option `colorlinks' set `true' on input line 116.
+Package hyperref Info: Option `colorlinks' set `true' on input line 118.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -2221,11 +2221,8 @@ File: lgrlmr.fd 2017/07/29 v1.2 Scalable Greek Latin Modern Regular
 )
 [3 <./graphics/schematic_discretized_disloc_lines.png>] [4 <./graphics/schemati
 cs_frank_read.png>]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-16.
+12.
 
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -2234,6 +2231,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
  [5]
 (main.aux)
  ***********
@@ -2247,10 +2247,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45749 strings out of 474542
- 904554 string characters out of 5744919
+ 45750 strings out of 474542
+ 904558 string characters out of 5744919
  1937978 words of memory out of 5000000
- 67170 multiletter control sequences out of 15000+600000
+ 67171 multiletter control sequences out of 15000+600000
  629922 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,11002b,2108s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2271,7 +2271,7 @@ lm/lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmri10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
 mssbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (6 pages, 620527 bytes).
+Output written on main.pdf (6 pages, 621703 bytes).
 PDF statistics:
  209 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
