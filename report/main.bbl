@@ -59,6 +59,71 @@
       \field{year}{2011}
       \field{dateera}{ce}
     \endentry
+    \entry{zaiser}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=42a9d3f2abfc30a0daf5677cf3a50caf}{%
+           family={Zaiser},
+           familyi={Z\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \strng{fullhash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \strng{bibnamehash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \strng{authorbibnamehash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \strng{authornamehash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \strng{authorfullhash}{42a9d3f2abfc30a0daf5677cf3a50caf}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Discrete {{Dislocation Dynamics}} Simulation - {{Problem Statement}}}
+    \endentry
+    \entry{anderson2017}{book}{}
+      \name{author}{3}{}{%
+        {{hash=d1057f0a649e38b49f8f15def8f3915a}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=665c0c0bae8482879e5a21e085e9e01f}{%
+           family={Hirth},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=362b486d35c319823d96e4685f4c6383}{%
+           family={Lothe},
+           familyi={L\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{209bcd659f983afe0f1d0d91117d0610}
+      \strng{fullhash}{4ec749f8363c281030b4b8221054243b}
+      \strng{bibnamehash}{4ec749f8363c281030b4b8221054243b}
+      \strng{authorbibnamehash}{4ec749f8363c281030b4b8221054243b}
+      \strng{authornamehash}{209bcd659f983afe0f1d0d91117d0610}
+      \strng{authorfullhash}{4ec749f8363c281030b4b8221054243b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{eprinttype}{googlebooks}
+      \field{isbn}{978-0-521-86436-7}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{pagetotal}{721}
+      \field{title}{Theory of {{Dislocations}}}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb LK7DDQAAQBAJ
+      \endverb
+      \keyw{Science / Mechanics / Aerodynamics,Science / Mechanics / Fluids,Science / Mechanics / Solids,Science / Physics / Crystallography,Technology & Engineering / Aeronautics & Astronautics,Technology & Engineering / Materials Science / General,Technology & Engineering / Mechanical}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

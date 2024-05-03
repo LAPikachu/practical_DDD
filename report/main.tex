@@ -35,7 +35,9 @@
 \newpage
 
 \section{Introduction}
-The topic of this practical is to get an introduction into \textit{discrete dislocation dynamic} (DDD)  simulations. In the course of the following exercises the open-source software \textit{microMegas} (mM) is utilized \cite{devincre2011}.   
+The topic of this practical is to get an introduction into \textit{discrete dislocation dynamic} (DDD)  simulations. In the course of the following exercises the open-source software \textit{microMegas} (mM) is utilized \cite{devincre2011}.  
+
+\subsection{General Aspects of Dislocation Dynamics} 
 
 As it is common for DDD simulation, three steps are carried out to model the dynamics of the dislocations:
 
@@ -68,6 +70,40 @@ As a result of the forces imposed on a dislocation, the dislocation might curve.
 	\label{fig:schematic_segments_dislocs}
 	\caption{a) Schematic representation of the elementary vectors used per slip system to discretize dislocation lines in mMs. The vectors \(l_{1-8}\)(in black), are used for the deﬁnition of the segments directions and the vectors \(\mathbf{d}_{1-8}\)(in blue) for the corresponding displacement directions. b) and c) Geometrical procedures for the displacement of a segment and its length variation. b) The trapezoidal area swept by segment S2 during a time step \(\Delta t\)(in grey) produces and increment of plastic shear.This procedure accounts for the direction of the two neighbouring segments. c) Before the displacement, a local rule for connections imposes the presence of a "pivotal segment" \(S_{3}\) (segment of zero length) between segments \(S_{2}\) and \(S_{4}\) reproduced from \cite{devincre2011}.}
 \end{figure}
+
+\FloatBarrier
+\subsection{Frank-Read Source}
+
+The Frank-Read source is going to be in the main focus of these exercises. A Frank-Read source is a dislocation segment that is pinned at two points. The force acting on it is generally the Peach-Köhler equation (eq.~\ref{eq:peach-koehler}), where the resolved shear stress \(\tau\) is acting on the segment:
+\begin{equation}
+	F =  \cdot \tau \mathbf{b}l
+\end{equation} 
+
+Above a certain critical shear stress \(\tau_{crit}\) the dislocation segment is becoming an infinite source for dislocation loops (see fig. \ref{fig:frank-read-scheme} )
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{schematics_frank_read.png}
+	\label{fig:frank-read-scheme}
+	\caption{ Activation of a Frank-Read source: Dislocation segment (a) is pinned at point A
+		and B. Under the applied shear stress τ it starts to bow out (b) till it reaches
+		its critical configuration (c), and then expands through its unstable state (d) till
+		self-anihilates to a dislocation loop and a new FR segment (e) reproduced from \cite{zaiser}.}
+\end{figure}
+
+The bow out stress given by Hirth ( \cite{anderson2017}, P. 752):
+
+\begin{equation}
+	b\tau_{crit} = \frac{\mu b^{2}}{4\pi r(1-\nu)} \biggl\{ \biggl[\ 1- \frac{\nu}{2}(3-4\cos^{2}\beta) \biggr]\ \ln \frac{L}{\rho} -1 + \frac{\nu}{2} \biggr\}
+\end{equation}
+
+for the common case of \( L =1000\rho \) is simplified to: 
+
+\begin{equation}
+	\tau_{crit} = \alpha \frac{\mu b}{L}
+\end{equation}
+
+with \(\alpha\) being 0.5 for pure edge dislocations and 1.5 for pure screw dislocations \cite{zaiser}. 
 
 %\listoffigures
 \printbibliography
