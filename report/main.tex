@@ -109,8 +109,22 @@ with \(\alpha\) being 0.5 for pure edge dislocations and 1.5 for pure screw disl
 The first Task deals with setting up a simulation of a pinned edge dislocation in mM. It acts as both an introduction the the software and an initial state for the following tasks.
 
 \subsection{Installing and Getting to Know The Software (Task 1.1 - 1.3)}
-In the first Task the required software is installed from the \href{http://zig.onera.fr/mm_home_page/}{microMegas Homepage}. The folder in which most work are done are \code{\textbackslash in} and \code{\textbackslash out}
+In the first Task the required software is installed from the \href{http://zig.onera.fr/mm_home_page/}{microMegas Homepage}. When running on a linux machine, virtual machine or WSL one can go to the \code{\textbackslash bin} folder and ron \code{make all} to compile the source files. The folder in which most work are done are \code{\textbackslash in} and \code{\textbackslash out}. Under \code{\textbackslash in} the input files are defined in \code{input.dd}:
 
+\begin{enumerate}
+	\item material specific data (e.g. Shear Modulus, Burgers Vector Norm, slip planes, slip directions)
+	\item simulation specific data (e.g. initial stress, stress increment, time step, echelle - size of elementary screw vector)
+	\item data defining the dislocation segments (position, composition, pinning)
+\end{enumerate}
+
+To run the simulation we run \code{.bin\textbackslash gmm}(for interactive mode with graphical interface - see fig. \ref{fig:mm_gui} ). 
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=0.5\textwidth]{mM_gui_eg.png}
+	\caption{GUI of mM}
+	\label{fig:mm_gui}
+\end{figure}
 
 %\listoffigures
 \printbibliography

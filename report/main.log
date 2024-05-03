@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  3 MAY 2024 13:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  3 MAY 2024 20:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2231,11 +2231,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+<graphics/mM_gui_eg.png, id=102, 306.39468pt x 324.46219pt>
+File: graphics/mM_gui_eg.png Graphic file (type png)
+<use graphics/mM_gui_eg.png>
+Package pdftex.def Info: graphics/mM_gui_eg.png  used on input line 124.
+(pdftex.def)             Requested size: 209.12683pt x 221.45815pt.
+ [5 <./graphics/mM_gui_eg.png>]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [5]
-(main.aux)
+ [6] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2247,11 +2252,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45750 strings out of 474542
- 904558 string characters out of 5744919
+ 45771 strings out of 474542
+ 904904 string characters out of 5744919
  1937978 words of memory out of 5000000
- 67171 multiletter control sequences out of 15000+600000
- 629922 words of font info for 142 fonts, out of 8000000 for 9000
+ 67181 multiletter control sequences out of 15000+600000
+ 630171 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,11002b,2108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSy
@@ -2271,9 +2276,9 @@ lm/lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmri10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
 mssbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (6 pages, 621703 bytes).
+Output written on main.pdf (7 pages, 637897 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 39492 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 223 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 39497 words of extra memory for PDF output out of 42996 (max. 10000000)
 

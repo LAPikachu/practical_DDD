@@ -6,7 +6,7 @@
 0.0             dmusurdT                : Rate of the Shear modulus temperature dependency
 0.431D0         DPOISS                  : Poisson modulus
 
-30.D6              TAUIII                  : Stress defining the beginning of stage III (GD) in Pa
+30.D6              TAUIII               : Stress defining the beginning of stage III (GD) in Pa
 0.9             BETA                    : 1st cross-slip parameter - pre-exp term (GD)
 0.6             ALPHA                   : 2d cross-slip parameter - Ratio TauG TauD (GD)
 
