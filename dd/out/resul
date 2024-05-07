@@ -12,7 +12,7 @@ set autoscale
 
 
 set title " Applied sigma (epsilon_tot %) in MPa"
-plot 'graph.txt' using 2:4 notitle w l
+plot 'graph.txt' using 2:4 notitle w l 80 * scale_factor
 pause -1 " 0) Applied sigma (epsilon_tot %) "
 
 set title " Applied tau (gamma %) in MPa"

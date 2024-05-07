@@ -6,8 +6,8 @@
   
  seg veclin O(1:3) norme E(1:3) idep vo/vnno ve/vnne jonc gd ijonc wait iboite rsesdep dom surf VFP singulier
      2: 2(   1200   1200   1200)     0(   1200   1200   1200)   0: 100000/100000:     1/     1:F:0:*****   0     0  0.000   1  0  0 F
-     1: 3(   1200   1200   1200)    80(   1360    880   1360)   0:      2/100000:     3/100000:F:0:*****   0     0  0.000   1  0  0 F
-     3: 2(   1360    880   1360)     0(   1360    880   1360)   0:      1/     1:100000/100000:F:0:*****   0     0  0.000   1  0  0 F
+     1: 3(   1200   1200   1200)    20(   1240   1120   1240)   0:      2/100000:     3/100000:F:0:*****   0     0  0.000   1  0  0 F
+     3: 2(   1240   1120   1240)     0(   1240   1120   1240)   0:      1/     1:100000/100000:F:0:*****   0     0  0.000   1  0  0 F
   
   Segments part of a closed loop      :::::::::::::::::::::::::::::
  seg veclin O(1:3) norme E(1:3) idep vo/vnno ve/vnne jonc gd ijonc wait iboite rsesdep dom surf VFP singulier
