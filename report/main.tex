@@ -130,7 +130,7 @@ To run the simulation we run \code{.bin\textbackslash gmm}(for interactive mode 
 
 Since the documentation of mM is not very clear on how the input is interpreted, it has to be deduced which input has an effect on the output. The \code{echelle} value in the \code{CuSeg} file seems to have an effect on the reference scale of the simulation as depicted in the \code{BVD.CFC} file. If we leave the initial value of \code{echelle} at 13.5 the reference scale is \(1.2183007689602674'10^{-9}\). Following the notes given in the respective README files and assuming that this value is given in units of meter, we can derive, that in the file defining our dislocation segments, we need to use a value of 2464 to have approximately \(3~\mu m\)5as the box dimensions.
 
-\subsection{Defining the Pinned Edge Dislocation (Task 1.6)}
+\subsection{Defining the Pinned Edge Dislocation (Task 1.6)} \label{sec:task1_6}
 
 For the pinned edge dislocation we define an input file \code{Seg\_Pinned\_Edge} as follows:
 \begin{tabular}{l}
@@ -141,9 +141,11 @@ For the pinned edge dislocation we define an input file \code{Seg\_Pinned\_Edge}
 \end{tabular}
 
 The first line defines which slip-systems are active (here all), the second is the number of dislocation segments the third defines the box size as a multiple of BVD units. The third line defines the dislocation as follows: column 1 - The segment index, column 2 - x coordinate of the segment origin, column 3 - y coordinate of the segment origin, column 4 - y coordinate of the segment origin, column 5 - length of the segment in BVD vector unit, column 6 - index of the BVD vector parallel to the segment direction, column 7 - first neighbor segment at the origin of the segment (zero for pining point), column 8 - first non zero length neighbor segment at the origin (idem), column 9 - first neighbor segment at the extremity side (idem), column 10 - first non zero length neighbor segment at the extremity side (idem), column 11 - Flag for junction segment, column 12 - index of the binome segment use to form a junction, column 13- Flag for screw segment in cross-slip state (blocked at the intersection of different glide planes). This is stated as a comment in an initial file, although it is not explicitly stated, what "idem" means. 
+When running the simulation without an applied stress the \code{graph.txt} output shows a value for the dislocation density that is 4 times the expected value. For these reasons the number of segments previously chosen in section \ref{sec:task1_6} is readjusted to be 20 instead of 80. This now leads to a dislocation density of \( \rho = 0.44127*10^{10}~\frac{1}{m^{2}}\) that is a segment length of \(L \approx 119~nm\).
 
 \subsection{Estimation of Critical Activation Stress (Task 1.7)}
-The critical shear stress \(\tau_{crit}\) can be estimated using \ref{eq:tau_crit}. With \(\alpha = 0.5\), \(\mu = 25.0~MPa\), \(b = 2.5525~\AA\) and a length of \(L = 80 * 1.2183007689602674~nm \). Resulting in an estimate value of \(\tau_{crit} = 55.0~MPa\).
+The critical shear stress \(\tau_{crit}\) can be estimated using \ref{eq:tau_crit}. With \(\alpha = 0.5\), \(\mu = 25.0~MPa\), \(b = 2.5525~\AA\) and a length of \(L \approx 119~nm \). Resulting in an estimate value of \(\tau_{crit} = 55.0~MPa\). \\
+
 
 %\listoffigures
 \printbibliography
