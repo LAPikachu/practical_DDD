@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  3 MAY 2024 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  6 MAY 2024 19:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2236,11 +2236,12 @@ File: graphics/mM_gui_eg.png Graphic file (type png)
 <use graphics/mM_gui_eg.png>
 Package pdftex.def Info: graphics/mM_gui_eg.png  used on input line 124.
 (pdftex.def)             Requested size: 209.12683pt x 221.45815pt.
- [5 <./graphics/mM_gui_eg.png>]
+ [5]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
- [6] (main.aux)
+
+[6 <./graphics/mM_gui_eg.png>] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2276,7 +2277,7 @@ lm/lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmri10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
 mssbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
 lmtt10.pfb>
-Output written on main.pdf (7 pages, 637897 bytes).
+Output written on main.pdf (7 pages, 638610 bytes).
 PDF statistics:
  223 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
