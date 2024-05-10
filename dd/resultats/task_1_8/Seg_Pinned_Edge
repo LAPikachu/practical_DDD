@@ -1,0 +1,33 @@
+ 1 1 1 1 1 1 1 1 1 1 1 1
+                  1
+                2464                2464                2464
+   1           1200      1200         1200   20        3       0     0     0    0    F        0    0
+
+####################################
+This is an example of segment file iThe segment file structure :
+
+Line 1: An integer for each slip system is first defined to ponderate the Schmid factors on slip systems
+(1 means that any change is made, 0 means that the Schmid factor is artificially set to zero)
+
+line 2: The number of segments
+
+line 3: dimensions of the simulation reference volume
+
+Form line 3 to doted lines: the segments description
+column 1 - The segment index
+column 2 - x coordinate of the segment origin
+column 3 - y coordinate of the segment origin
+column 4 - y coordinate of the segment origin
+column 5 - length of the segment in BVD vector unit
+column 6 - index of the BVD vector parallel to the segment direction
+column 7 - first neighbor segment at the origin of the segment (zero for pining point)
+column 8 - first non zero length neighbor segment at the origin (idem)
+column 9 - first neighbor segment at the extremity side (idem)
+column 10- first non zero length neighbor segment at the extremity side (idem)
+column 11- Flag for junction segment
+column 12- index of the binome segment use to form a junction
+column 13- Flag for screw segment in cross-slip state (blocked at the intersection of different glide planes)
+
+Please, note that the index of column 7 to 10 can be negative in starting files.
+Negative index, means that segments connectivity is relative and must be completed
+When needed, additional kneecaps will be added to the initial configuration.n a cubic periodic volume including an infinite edge dislocation
