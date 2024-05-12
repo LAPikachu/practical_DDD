@@ -7,4 +7,5 @@
 \contentsline {subsection}{\numberline {2.2}Defining the Simulation Box (Task 1.5)}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Defining the Pinned Edge Dislocation (Task 1.6)}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Estimation of Critical Activation Stress (Task 1.7)}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Calculating the Critical Activation Stress (Task 1.8)}{7}{subsection.2.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

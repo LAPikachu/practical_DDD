@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  7 MAY 2024 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  11 MAY 2024 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2200,14 +2200,14 @@ s/lm/lm-mathit.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 dvips/mnsymbol/MnSymbolE.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts
 /enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/
 fonts/enc/dvips/lm/lm-rm.enc}]
-<graphics/schematic_discretized_disloc_lines.png, id=78, 861.9703pt x 282.30469
+<graphics/schematic_discretized_disloc_lines.png, id=81, 861.9703pt x 282.30469
 pt>
 File: graphics/schematic_discretized_disloc_lines.png Graphic file (type png)
 <use graphics/schematic_discretized_disloc_lines.png>
 Package pdftex.def Info: graphics/schematic_discretized_disloc_lines.png  used 
 on input line 69.
 (pdftex.def)             Requested size: 418.25368pt x 136.98653pt.
-<graphics/schematics_frank_read.png, id=84, 150.5625pt x 110.66344pt>
+<graphics/schematics_frank_read.png, id=87, 150.5625pt x 110.66344pt>
 File: graphics/schematics_frank_read.png Graphic file (type png)
 <use graphics/schematics_frank_read.png>
 Package pdftex.def Info: graphics/schematics_frank_read.png  used on input line
@@ -2231,7 +2231,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<graphics/mM_gui_eg.png, id=111, 306.39468pt x 324.46219pt>
+<graphics/mM_gui_eg.png, id=114, 306.39468pt x 324.46219pt>
 File: graphics/mM_gui_eg.png Graphic file (type png)
 <use graphics/mM_gui_eg.png>
 Package pdftex.def Info: graphics/mM_gui_eg.png  used on input line 124.
@@ -2239,12 +2239,24 @@ Package pdftex.def Info: graphics/mM_gui_eg.png  used on input line 124.
  [5]
 [6 <./graphics/mM_gui_eg.png>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 146.
+LaTeX Warning: Command \r invalid in math mode on input line 147.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+<graphics/plot_tau_crit_L_100nm.png, id=133, 462.528pt x 346.896pt>
+File: graphics/plot_tau_crit_L_100nm.png Graphic file (type png)
+<use graphics/plot_tau_crit_L_100nm.png>
+Package pdftex.def Info: graphics/plot_tau_crit_L_100nm.png  used on input line
+ 154.
+(pdftex.def)             Requested size: 418.25368pt x 313.70677pt.
+[7]
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-[7] (main.aux)
+ [8 <./graphics/plot_tau_crit_L_100nm.png>] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2256,11 +2268,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45789 strings out of 474542
- 905122 string characters out of 5744919
+ 45808 strings out of 474542
+ 905578 string characters out of 5744919
  1937978 words of memory out of 5000000
- 67187 multiletter control sequences out of 15000+600000
- 630503 words of font info for 149 fonts, out of 8000000 for 9000
+ 67199 multiletter control sequences out of 15000+600000
+ 630669 words of font info for 151 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,11002b,2108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSy
@@ -2276,13 +2288,14 @@ e1/public/lm/lmbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type
 ublic/lm/lmr10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmr12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/lm/lmr17.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmri10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/l
-mssbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmtt10.pfb>
-Output written on main.pdf (8 pages, 656314 bytes).
+lm/lmr6.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+i10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss
+bx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmt
+t10.pfb>
+Output written on main.pdf (9 pages, 686360 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 39521 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 269 PDF objects out of 1000 (max. 8388607)
+ 40 named destinations out of 1000 (max. 500000)
+ 39534 words of extra memory for PDF output out of 42996 (max. 10000000)
 

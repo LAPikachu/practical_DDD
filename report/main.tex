@@ -146,8 +146,15 @@ When running the simulation without an applied stress the \code{graph.txt} outpu
 \subsection{Estimation of Critical Activation Stress (Task 1.7)}
 The critical shear stress \(\tau_{crit}\) can be estimated using \ref{eq:tau_crit}. With \(\alpha = 0.5\), \(\mu = 25.0~MPa\), \(b = 2.5525~\AA\) and a length of \(L \approx 119~nm \). Resulting in an estimate value of \(\tau_{crit} = 45.0~MPa\). \\
 
-\subsection(Calculating the Critical Activation Stress (Task 1.8))
-To calculate the critical activation stress we start a Simulation at with an initial shear stress of 45~GPa and increase the stress by a value of \(3*10^{9}~\frac{MPa}{s}\) where the time step set to \(0.125*10^{-11}~s\). 
+\subsection{Calculating the Critical Activation Stress (Task 1.8)}
+To calculate the critical activation stress we start a Simulation at with an initial shear stress of 45~GPa and increase the stress by a value of \(3*10^{9}~\frac{MPa}{s}\) where the time step set to \(0.125*10^{-11}~s\). Plotting the dislocation density \(\rho\) with increasing \(\tau\) (see fig. \ref{fig:tau_vs_rho})) allows us to find the point at which the density starts to increase - meaning: the source has been activated. Using a python script implemented with the elbow method the point at which \(\rho\) starts to deviate (\(\tau_{crit}\)) can be reproduced. Here it is 73.5 MPA.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{plot_tau_crit_L_100nm.png}
+	\caption{Dislocation density \(\rho\) with increasing shear stress \(\tau\). \(\tau_{crit}\) is reached at 73.5 MPa. }
+	\label{fig:tau_vs_rho}	
+\end{figure}
 
 %\listoffigures
 \printbibliography
