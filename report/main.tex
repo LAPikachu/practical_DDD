@@ -100,7 +100,7 @@ The bow out stress given by Hirth ( \cite{anderson2017}, P. 752):
 for the common case of \( L =1000\rho \) is simplified to: 
 
 \begin{equation}
-	\tau_{crit} = \alpha \frac{\mu b}{L}
+	\tau_{crit} = \alpha \frac{\mu b}{L} \label{eq:tau_crit}
 \end{equation}
 
 with \(\alpha\) being 0.5 for pure edge dislocations and 1.5 for pure screw dislocations \cite{zaiser}. 
@@ -158,7 +158,7 @@ To calculate the critical activation stress we start a Simulation at with an ini
 
 \subsection{Calculation of alpha(Task 1.9)}
 
-\(\alpha = 0.82\)
+Calculating the value of \(\alpha\) by solving \ref{eq:tau_crit} for \(\alpha \) with \(\tau_{crit}=73.5~\mathbf{MPa} \) yields - \(\alpha = 0.82\).
 
 %\listoffigures
 \printbibliography
