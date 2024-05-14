@@ -160,6 +160,28 @@ To calculate the critical activation stress we start a Simulation at with an ini
 
 Calculating the value of \(\alpha\) by solving \ref{eq:tau_crit} for \(\alpha \) with \(\tau_{crit}=73.5~\mathbf{MPa} \) yields - \(\alpha = 0.82\).
 
+\section{Varying The Dislocation Segments Length (Task 2)}
+In the following simulations we vary the dislocation segments' lengths. We chose the lenghts \(\mathbf{L}=59.5 , 119, 178.5, 238~\mathbf{nm}\).
+\subsection{Running the Simulation (Task 2.1 - 2.3)}
+We use the same setup as in section \ref{sec:task1_6}. To minimize the range in which we vary the the stress on the simulation  box, the theoretical critical stress is calculated first - according to eq. \ref{eq:tau_crit}.  Running the simulations starting at a stress close to the theoretical stress allows us to only run for few 10000 steps to already see the Frank-Read source be activated. 
+
+\subsection{Discussion of Results (Task 2.4 - 2.6)}
+Fig. \ref{fig:tau_crit_theo_vs_sim} shows the discrepancy of the theoretically calculated \(\tau_{crit}\) and the simulated values. The average error lies around 48.3~MPa. calculated as stated below:
+
+\begin{equation}
+	\Delta \tau_{crit} = \frac{\sum_{i=0}^{N} \sqrt{(\tau_{crit,theo,i} - \tau_{crit,sim,i})^{2}}}{N} 
+\end{equation}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{seg_length_tau_crit.png}
+	\caption{Comparison of the theoretical critical stress \(\tau_{crit}\) and the simulation results with respect to the dislocation length L.}
+	\label{fig:tau_crit_theo_vs_sim}
+\end{figure}
+
+However it is evident that with increasing length of the segment the error is getting smaller. A possible explanation for this might be the dominance of the screw segment character of the pinned segment for a long source. When a shorter source starts to bow out the number of segments for which \(\alpha = 1.5\) increases, leading to a necessity for higher stresses. Additional, experiments with the simulations parameters show that increasing the box dimensions allows us to longer observe the emitted dislocation as it is not instantly aniihilated at the periodic boundary. Additionally: increasing either box size or 
+
+
 %\listoffigures
 \printbibliography
 
