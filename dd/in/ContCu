@@ -4,9 +4,9 @@
 13.5          Echelle           Reference scale, i.e. size of elementary screw vectors in BVD.XXX (Burgers vector unit) intially 13.5
 
 T           Shear             True : shear stress resolved on the slip system with highest Schmid factor; False = uniaxial stress
-20        Sigma0            Initial stress (MPa)
+0    Sigma0            Initial stress (MPa)
 0.125D-11  deltat0           Elementary time step (s)
-3D9         SigmaPoint        Elementary stress increments (MPa s-1)      (mode_deformation=3,6,7)
+0       SigmaPoint        Elementary stress increments (MPa s-1)      (mode_deformation=3,6,7)
 0          EpsilonPoint      Imposed strain rate (s-1)                   (mode_deformation=0,5,6,7,9)
 1.5         RAID              Apparent Young modulus                      (mode_deformation=0,5,6,7)
 3.0D-5      EPSMAX            Maximum plastic strain per cycles           (mode_deformation=5)
@@ -27,7 +27,7 @@ F           key_crack         Add the stress field of a sharp crack in the simul
 0           relax_TL          Number of steps ascribed to initial relaxation when involving line tension only
 100         relax_INT         Number of steps ascribed to initial relaxation under no applied load and with no contact reactions allowed
 100         relax_reac        Number of steps ascribed to initial relaxation under no applied loading
-12000         NSTEP             Number of steps of simulation
+10000         NSTEP             Number of steps of simulation
 
 0.25        Ldis_act          Segment length (micron) at which line discretization is systematically tested  (micron).
 0.25        Ldis_nact         Same as above for segments belonging to an inactive slip systems (micron).
