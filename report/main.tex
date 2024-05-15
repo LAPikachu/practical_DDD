@@ -51,7 +51,7 @@ As it is common for DDD simulation, three steps are carried out to model the dyn
 	F = (\sigma_{ext}+\sigma_{int}) \mathbf{b}l  \label{eq:peach-koehler}
 \end{equation}
 
-The Peach-Köhler Equation (eq. \ref{eq:peach-koehler}) takes into account internal- \( \sigma_{int} \) and external stresses  \( \sigma_{ext} \) acting on dislocation segments of vector \(l\) with a burgers vector of \( \mathbf{b}\). In mM (and similar frameworks) \( \sigma_{ext}\) is imposed on the system as a parameter. 
+The Peach-Köhler Equation (eq. \ref{eq:peach-koehler}) takes into account internal \( \sigma_{int} \) and external stresses  \( \sigma_{ext} \) acting on dislocation segments of vector \(l\) with a burgers vector of \( \mathbf{b}\). In mM (and similar frameworks) \( \sigma_{ext}\) is imposed on the system as a parameter. 
 
 \begin{subequations}
 	\begin{align}
@@ -76,7 +76,7 @@ As a result of the forces imposed on a dislocation, the dislocation might curve.
 
 The Frank-Read source is going to be in the main focus of these exercises. A Frank-Read source is a dislocation segment that is pinned at two points. The force acting on it is generally the Peach-Köhler equation (eq.~\ref{eq:peach-koehler}), where the resolved shear stress \(\tau\) is acting on the segment:
 \begin{equation}
-	F =  \cdot \tau \mathbf{b}l
+	F = \tau  \cdot \mathbf{b}l
 \end{equation} 
 
 Above a certain critical shear stress \(\tau_{crit}\) the dislocation segment is becoming an infinite source for dislocation loops (see fig. \ref{fig:frank-read-scheme}). The two folders 
@@ -106,7 +106,7 @@ for the common case of \( L =1000\rho \) is simplified to:
 with \(\alpha\) being 0.5 for pure edge dislocations and 1.5 for pure screw dislocations \cite{zaiser}. 
 
 \section{Simulation Setup (Task 1)}
-The first Task deals with setting up a simulation of a pinned edge dislocation in mM. It acts as both an introduction the the software and an initial state for the following tasks.
+The first task deals with setting up a simulation of a pinned edge dislocation in mM. It acts as both an introduction the the software and an initial state for the following tasks.
 
 \subsection{Installing and Getting to Know The Software (Task 1.1 - 1.4)}
 In the first Task the required software is installed from the \href{http://zig.onera.fr/mm_home_page/}{microMegas Homepage}. When running on a linux machine, virtual machine or WSL one can go to the \code{\textbackslash bin} folder and ron \code{make all} to compile the source files. The folder in which most work are done are \code{\textbackslash in} and \code{\textbackslash out}. Under \code{\textbackslash in} the input files are defined in \code{input.dd}:
@@ -117,7 +117,7 @@ In the first Task the required software is installed from the \href{http://zig.o
 	\item data defining the dislocation segments (position, composition, pinning)
 \end{enumerate}
 
-To run the simulation we run \code{.bin\textbackslash gmm}(for interactive mode with graphical interface - see fig. \ref{fig:mm_gui}). The output can be visualized in the \code{\textbackslash out} folder using plotting the data saved to the \code{graph.txt} file.
+To run the simulation we run \code{.bin\textbackslash gmm} (for interactive mode with graphical interface - see fig. \ref{fig:mm_gui}. The output can be visualized in the \code{\textbackslash out} folder using plotting the data saved to the \code{graph.txt} file.
 
 \begin{figure}[htb]
 	\centering
@@ -128,7 +128,7 @@ To run the simulation we run \code{.bin\textbackslash gmm}(for interactive mode 
 
 \subsection{Defining the Simulation Box (Task 1.5)}
 
-Since the documentation of mM is not very clear on how the input is interpreted, it has to be deduced which input has an effect on the output. The \code{echelle} value in the \code{CuSeg} file seems to have an effect on the reference scale of the simulation as depicted in the \code{BVD.CFC} file. If we leave the initial value of \code{echelle} at 13.5 the reference scale is \(1.2183007689602674'10^{-9}\). Following the notes given in the respective README files and assuming that this value is given in units of meter, we can derive, that in the file defining our dislocation segments, we need to use a value of 2464 to have approximately \(3~\mu m\)5as the box dimensions.
+Since the documentation of mM is not very clear on how the input is interpreted, it has to be deduced which input has an effect on the output. The \code{echelle} value in the \code{CuSeg} file seems to have an effect on the reference scale of the simulation as depicted in the \code{BVD.CFC} file. If we leave the initial value of \code{echelle} at 13.5 the reference scale is \(1.2183007689602674 \cdot 10^{-9}\). Following the notes given in the respective README files and assuming that this value is given in units of meter, we can derive, that in the file defining our dislocation segments, we need to use a value of 2464 to have approximately \(3~\mu m\)5as the box dimensions.
 
 \subsection{Defining the Pinned Edge Dislocation (Task 1.6)} \label{sec:task1_6}
 
@@ -158,10 +158,10 @@ To calculate the critical activation stress we start a Simulation at with an ini
 
 \subsection{Calculation of alpha(Task 1.9)}
 
-Calculating the value of \(\alpha\) by solving \ref{eq:tau_crit} for \(\alpha \) with \(\tau_{crit}=73.5~\mathtt{MPa} \) yields - \(\alpha = 0.82\).
+Calculating the value of \(\alpha\) by solving \ref{eq:tau_crit} for \(\alpha \) with \(\tau_{crit}=74.0~\mathtt{MPa} \) yields \(\alpha = 0.82\).
 
 \section{Varying The Dislocation Segments Length (Task 2)}\label{sec:task2}
-In the following simulations we vary the dislocation segments' lengths. We chose the lengths \(\mathtt{L}=59.5 , 119, 178., 238~\mathtt{nm}\).
+In the following simulations we vary the dislocation segments' lengths. We chose the lengths \(\mathtt{L}=59.5 , 79.3, 119, 178.5, 238~\mathtt{nm}\).
 \subsection{Running the Simulation (Task 2.1 - 2.3)}
 We use the same setup as in section \ref{sec:task1_6}. To minimize the range in which we vary the the stress on the simulation  box, the theoretical critical stress is calculated first - according to eq. \ref{eq:tau_crit}.  Running the simulations starting at a stress close to the theoretical stress allows us to only run for few 10000 steps to already see the Frank-Read source be activated. 
 
@@ -183,7 +183,7 @@ However it is evident that with increasing length of the segment the error is ge
 
 \section{Investigating The Influence of the Dislocation Segments Angle with respect to the Burgers Vector (Task 3}
 
-As stated in the initial paper introducing mM 8 different segment orientations are used (fig. \ref{fig:schematic_segments_dislocs}. Segment types 1 and 3 are pure screw and pure edge segments, while the rest are mixed segments \cite{devincre2011}.
+As stated in the initial paper introducing mM 8 different segment orientations are used (fig. \ref{fig:schematic_segments_dislocs}). Segment types 1 and 3 are pure screw and pure edge segments, while the rest are mixed segments \cite{devincre2011}.
 
 \subsection{Set-up (Task 3.1 - 3.2)}
 Initially, one could start with the set-up of the previous task and only change the segments' orientation types, to investigate the change of \(\tau_{crit}\) and subsequently \(\alpha\) as a result.

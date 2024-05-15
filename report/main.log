@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  15 MAY 2024 10:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  15 MAY 2024 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2386,11 +2386,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46953 strings out of 474542
- 925281 string characters out of 5744919
+ 46955 strings out of 474542
+ 925303 string characters out of 5744919
  1938372 words of memory out of 5000000
  68276 multiletter control sequences out of 15000+600000
- 641369 words of font info for 177 fonts, out of 8000000 for 9000
+ 641452 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,11002b,2108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSy
@@ -2413,7 +2413,7 @@ lmr6.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
 .pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx1
 0.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10
 .pfb>
-Output written on main.pdf (13 pages, 752040 bytes).
+Output written on main.pdf (13 pages, 751123 bytes).
 PDF statistics:
  379 PDF objects out of 1000 (max. 8388607)
  56 named destinations out of 1000 (max. 500000)
