@@ -147,7 +147,7 @@ When running the simulation without an applied stress the \code{graph.txt} outpu
 The critical shear stress \(\tau_{crit}\) can be estimated using \ref{eq:tau_crit}. With \(\alpha = 0.5\), \(\mu = 25.0~MPa\), \(b = 2.5525~\AA\) and a length of \(L \approx 119~nm \). Resulting in an estimate value of \(\tau_{crit} = 45.0~MPa\). \\
 
 \subsection{Calculating the Critical Activation Stress (Task 1.8)}
-To calculate the critical activation stress we start a Simulation at with an initial shear stress of 45~GPa and increase the stress by a value of \(3*10^{9}~\frac{MPa}{s}\) where the time step set to \(0.125*10^{-11}~s\). Plotting the dislocation density \(\rho\) with increasing \(\tau\) (see fig. \ref{fig:tau_vs_rho})) allows us to find the point at which the density starts to increase - meaning: the source has been activated. Using a python script implemented with the elbow method the point at which \(\rho\) starts to deviate (\(\tau_{crit}\)) can be reproduced. Here it is 73.5 MPA.
+To calculate the critical activation stress we start a Simulation at with an initial shear stress of 45~GPa and increase the stress by a value of \(3*10^{9}~\frac{MPa}{s}\) where the time step set to \(0.125*10^{-11}~s\). Plotting the dislocation density \(\rho\) with increasing \(\tau\) (see fig. \ref{fig:tau_vs_rho})) allows us to find the point at which the density starts to increase - meaning: the source has been activated. Using a python script implemented with the elbow method the point at which \(\rho\) starts to deviate (\(\tau_{crit}\)) can be reproduced. Here it is 73.5 MPA. The algorithm finding the the index of the correct \(\tau_{crit}\) is shown in the Appendix.
 
 \begin{figure}[htb]
 	\centering
@@ -160,7 +160,7 @@ To calculate the critical activation stress we start a Simulation at with an ini
 
 Calculating the value of \(\alpha\) by solving \ref{eq:tau_crit} for \(\alpha \) with \(\tau_{crit}=73.5~\mathtt{MPa} \) yields - \(\alpha = 0.82\).
 
-\section{Varying The Dislocation Segments Length (Task 2)}
+\section{Varying The Dislocation Segments Length (Task 2)}\label{sec:task2}
 In the following simulations we vary the dislocation segments' lengths. We chose the lengths \(\mathtt{L}=59.5 , 119, 178., 238~\mathtt{nm}\).
 \subsection{Running the Simulation (Task 2.1 - 2.3)}
 We use the same setup as in section \ref{sec:task1_6}. To minimize the range in which we vary the the stress on the simulation  box, the theoretical critical stress is calculated first - according to eq. \ref{eq:tau_crit}.  Running the simulations starting at a stress close to the theoretical stress allows us to only run for few 10000 steps to already see the Frank-Read source be activated. 
@@ -187,7 +187,38 @@ As stated in the initial paper introducing mM 8 different segment orientations a
 
 \subsection{Set-up (Task 3.1 - 3.2)}
 Initially, one could start with the set-up of the previous task and only change the segments' orientation types, to investigate the change of \(\tau_{crit}\) and subsequently \(\alpha\) as a result.
-But pre-simulation assessment shows that the dislocation density changes between pure and mixed orientations. Subsequently, the number of sub-segments had to be changed to 35 in for mixed segments. Since only integer numbers of sub-segments are acceptable this leaves us with slightly longer dislocations for mixed segments (\( \Delta L \approx 1~\mathtt{nm}\))  
+But pre-simulation assessment shows that the dislocation density changes between the different orientation types. Subsequently, the number of sub-segments had to be changed to 35 for type 1 (pure screw) 2,4,6 and 8. Since only integer numbers of sub-segments are acceptable this leaves us with slightly longer dislocations for these (\( \Delta L \approx 1~\mathtt{nm}\))  
+
+\subsection{Calulating \(\alpha\) and Plotting the results (Task 3.3 - 3.4)}
+The individual \(\tau_{crit}\) values for the different angles of the segment with respect to the burgers vector (\(\beta\)) could be extracted from the data similar to section \ref{sec:task2}. The alpha values where then calculated, solving eq. \ref{eq:tau_crit} for \(\alpha\). Fig. \ref{fig:beta_vs_alpha} shows the corresponding results.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\textwidth]{beta_vs_alpha.png}
+	\caption{\(\alpha\) for different angles \(\beta\) of dislocation segment to burgers vector.}
+	\label{fig:beta_vs_alpha}
+\end{figure}
+
+It is evident that the \(\alpha\) value is smallest for \(0.5 \pi\) - that is the pure edge dislocation while \(\pi\) and \(2 \pi\) exhibit the largest value - these are pure screw dislocations and a mixed dislocation parallel to it. 
+
+\newpage
+
+\appendix
+
+\section{Elbow-finding algorithm} \label{sec:elbow_finding}
+
+Assuming \(\mathbf{x}\) are a series of date-points and \(\mathbf{y}\) are its corresponding y-values. We can find the point at which the series deviates from constant behaviour as follows:
+
+\begin{algorithm}
+	I. \(\theta = \arctan \big(  \frac{\max \mathbf{y} - \min \mathbf{y}  )}{\max \mathbf{x} - \min \mathbf{x}  )}  \big) \) \\
+	II. \( (\mathbf{\bar{x}}, \mathbf{\bar{y}}) = (\mathbf{x}, \mathbf{y}) \cdot \begin{bmatrix}
+		\cos(\theta) &  -\sin(\theta) \\
+	    \sin(\theta) &  \cos(\theta)
+	\end{bmatrix} \) \\
+	\(\mathtt{return} \quad \min\bar{x} \quad \mathtt{and} \quad \min\bar{y}  \) 
+\end{algorithm}
+
+
 %\listoffigures
 \printbibliography
 

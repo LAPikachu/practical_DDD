@@ -14,4 +14,6 @@
 \contentsline {subsection}{\numberline {3.2}Discussion of Results (Task 2.4 - 2.6)}{9}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Investigating The Influence of the Dislocation Segments Angle with respect to the Burgers Vector (Task 3}{10}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Set-up (Task 3.1 - 3.2)}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Calulating \(\alpha \) and Plotting the results (Task 3.3 - 3.4)}{10}{subsection.4.2}%
+\contentsline {section}{\numberline {A}Elbow-finding algorithm}{11}{appendix.A}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
