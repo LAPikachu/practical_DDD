@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  14 MAY 2024 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.5)  15 MAY 2024 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1899,11 +1899,62 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip122
 )
+(C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/algorithm2e\algorithm2e.
+sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count490
+\algocf@hangindent=\skip123
+
+(C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count491
+) (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip124
+\skiplinenumber=\skip125
+\skiprule=\skip126
+\skiphlne=\skip127
+\skiptext=\skip128
+\skiplength=\skip129
+\algomargin=\skip130
+\skipalgocfslide=\skip131
+\algowidth=\dimen357
+\inoutsize=\dimen358
+\inoutindent=\dimen359
+\interspacetitleruled=\dimen360
+\interspacealgoruled=\dimen361
+\interspacetitleboxruled=\dimen362
+\algocf@ruledwidth=\skip132
+\algocf@inoutbox=\box127
+\algocf@inputbox=\box128
+\AlCapSkip=\skip133
+\AlCapHSkip=\skip134
+\algoskipindent=\skip135
+\algocf@nlbox=\box129
+\algocf@hangingbox=\box130
+\algocf@untilbox=\box131
+\algocf@skipuntil=\skip136
+\algocf@capbox=\box132
+\algocf@lcaptionbox=\skip137
+\algoheightruledefault=\skip138
+\algoheightrule=\skip139
+\algotitleheightruledefault=\skip140
+\algotitleheightrule=\skip141
+\c@algocfline=\count492
+\c@algocfproc=\count493
+\c@algocf=\count494
+\algocf@algoframe=\box133
+\algocf@algobox=\box134
+)
 1: subsection
 1: section
 1: section
 1: subsection
-Package hyperref Info: Option `colorlinks' set `true' on input line 118.
+Package hyperref Info: Option `colorlinks' set `true' on input line 120.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1989,7 +2040,7 @@ Package scrbase Info: activating english \indexname on input line 4.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count490
+\c@lstlisting=\count495
 LaTeX Info: Redefining \microtypecontext on input line 4.
 Package microtype Info: Applying patch `item' on input line 4.
 Package microtype Info: Applying patch `toc' on input line 4.
@@ -2013,16 +2064,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count491
-\scratchdimen=\dimen357
-\scratchbox=\box127
-\nofMPsegments=\count492
-\nofMParguments=\count493
+\scratchcounter=\count496
+\scratchdimen=\dimen363
+\scratchbox=\box135
+\nofMPsegments=\count497
+\nofMParguments=\count498
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count494
-\MPscratchDim=\dimen358
-\MPnumerator=\count495
-\makeMPintoPDFobject=\count496
+\MPscratchCnt=\count499
+\MPscratchDim=\dimen364
+\MPnumerator=\count500
+\makeMPintoPDFobject=\count501
 \everyMPtoPDFconversion=\toks47
 )
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
@@ -2084,7 +2135,7 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (C:\Users\Leon\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count497
+\BKM@id=\count502
 ))
 Package epstopdf Info: Source file: <graphics/FAU_TechFak_EN_H_black.eps>
 (epstopdf)                    date: 2024-02-10 20:02:20
@@ -2198,20 +2249,20 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.35 \newpage
-              [1] [2{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvip
-s/lm/lm-mathit.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
+              [1{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm
+/lm-mathit.enc}] [2{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips
 /mnsymbol/MnSymbolD.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/
 dvips/mnsymbol/MnSymbolE.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts
 /enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Users/Leon/AppData/Local/Programs/MiKTeX/
 fonts/enc/dvips/lm/lm-rm.enc}]
-<graphics/schematic_discretized_disloc_lines.png, id=100, 861.9703pt x 282.3046
+<graphics/schematic_discretized_disloc_lines.png, id=106, 861.9703pt x 282.3046
 9pt>
 File: graphics/schematic_discretized_disloc_lines.png Graphic file (type png)
 <use graphics/schematic_discretized_disloc_lines.png>
 Package pdftex.def Info: graphics/schematic_discretized_disloc_lines.png  used 
 on input line 69.
 (pdftex.def)             Requested size: 418.25368pt x 136.98653pt.
-<graphics/schematics_frank_read.png, id=106, 150.5625pt x 110.66344pt>
+<graphics/schematics_frank_read.png, id=112, 150.5625pt x 110.66344pt>
 File: graphics/schematics_frank_read.png Graphic file (type png)
 <use graphics/schematics_frank_read.png>
 Package pdftex.def Info: graphics/schematics_frank_read.png  used on input line
@@ -2235,7 +2286,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<graphics/mM_gui_eg.png, id=133, 306.39468pt x 324.46219pt>
+<graphics/mM_gui_eg.png, id=139, 306.39468pt x 324.46219pt>
 File: graphics/mM_gui_eg.png Graphic file (type png)
 <use graphics/mM_gui_eg.png>
 Package pdftex.def Info: graphics/mM_gui_eg.png  used on input line 124.
@@ -2250,7 +2301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-<graphics/plot_tau_crit_L_100nm.png, id=152, 462.528pt x 346.896pt>
+<graphics/plot_tau_crit_L_100nm.png, id=158, 462.528pt x 346.896pt>
 File: graphics/plot_tau_crit_L_100nm.png Graphic file (type png)
 <use graphics/plot_tau_crit_L_100nm.png>
 Package pdftex.def Info: graphics/plot_tau_crit_L_100nm.png  used on input line
@@ -2267,7 +2318,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [7{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rmtt.enc}
 ] [8 <./graphics/plot_tau_crit_L_100nm.png>]
-<graphics/seg_length_tau_crit.png, id=169, 462.528pt x 346.896pt>
+<graphics/seg_length_tau_crit.png, id=175, 462.528pt x 346.896pt>
 File: graphics/seg_length_tau_crit.png Graphic file (type png)
 <use graphics/seg_length_tau_crit.png>
 Package pdftex.def Info: graphics/seg_length_tau_crit.png  used on input line 1
@@ -2275,10 +2326,31 @@ Package pdftex.def Info: graphics/seg_length_tau_crit.png  used on input line 1
 (pdftex.def)             Requested size: 418.25368pt x 313.70677pt.
  [9{C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/mnsymbol/MnSymb
 olF.enc} <./graphics/seg_length_tau_crit.png>]
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/lmr/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Fixing zero \fontdimen 6 for font `OMX/MnSymbolE/m/n/12
+'
+(microtype)             (new value: 12.0pt) on input line 192.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolA/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 192.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolB/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 192.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolC/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 192.
+Package microtype Info: Fixing zero \fontdimen 6 for font `U/MnSymbolD/m/n/12'
+(microtype)             (new value: 12.0pt) on input line 192.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 192.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 192.
+
+<graphics/beta_vs_alpha.png, id=190, 462.528pt x 346.896pt>
+File: graphics/beta_vs_alpha.png Graphic file (type png)
+<use graphics/beta_vs_alpha.png>
+Package pdftex.def Info: graphics/beta_vs_alpha.png  used on input line 197.
+(pdftex.def)             Requested size: 418.25368pt x 313.70677pt.
 
 Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                At least 34.0pt needed,
@@ -2287,14 +2359,18 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=34.0pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 1
-94.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 2
+04.
 
 
 Overfull \vbox (17.0pt too high) has occurred while \output is active []
 
  [10]
-(main.aux)
+[11 <./graphics/beta_vs_alpha.png>]
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [12] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -2310,11 +2386,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45894 strings out of 474542
- 907025 string characters out of 5744919
- 1937978 words of memory out of 5000000
- 67254 multiletter control sequences out of 15000+600000
- 632187 words of font info for 161 fonts, out of 8000000 for 9000
+ 46953 strings out of 474542
+ 925281 string characters out of 5744919
+ 1938372 words of memory out of 5000000
+ 68276 multiletter control sequences out of 15000+600000
+ 641369 words of font info for 177 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,20n,110p,11002b,2108s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/mnsymbol/MnSy
@@ -2323,21 +2399,23 @@ mbol/MnSymbol8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/cbgreek/grmn1000.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/lm/lmbx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/lm/lmbx12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmcsc10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmcsco10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/lm/lmmi10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/lm/lmmi8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/lm/lmr10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/lm/lmr12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/lm/lmr17.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmr6.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
-lmr8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
-i10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss
-bx10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmt
-t10.pfb>
-Output written on main.pdf (11 pages, 715476 bytes).
+/public/lm/lmbx8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmcsc10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmcsco10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmmi10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmmi12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmmi8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/lm/lmr10.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/lm/lmr12.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmr17.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmr6.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr
+8.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10
+.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx1
+0.pfb><C:/Users/Leon/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10
+.pfb>
+Output written on main.pdf (13 pages, 752040 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 41123 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 379 PDF objects out of 1000 (max. 8388607)
+ 56 named destinations out of 1000 (max. 500000)
+ 45752 words of extra memory for PDF output out of 51595 (max. 10000000)
 
