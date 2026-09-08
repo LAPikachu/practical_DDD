@@ -95,8 +95,12 @@ class DislocationGenerator:
         self.step_screw = {'idx': 1, 'dx': -2, 'dy': 0, 'dz': 2}
 
     def generate_smart_configuration(self, beta_deg, L_target_nm, start_coord, box_dim, output_filepath):
+        reference_scale = 1.2183
         cx, cy, cz = start_coord
         os.makedirs(os.path.dirname(output_filepath) or '.', exist_ok=True)
+
+        for i in range(len(box_dim)):
+            box_dim[i] = (((box_dim[i]/reference_scale) + 7) // 8) * 8  # For converting nm dimensions to BVD units, ensuring divisibility by 8
 
         with open(output_filepath, 'w') as f:
             # --- Header ---
@@ -303,16 +307,16 @@ if __name__ == "__main__":
     wrapper = MicroMegasWrapper(base_repo_path=REPO_PATH)
     
     # We can easily loop over different orientations
-    ANGLES = [0]
+    ANGLES = [90] # Pure Edge
     
     for angle in ANGLES:
         # Create a new, unique configuration for this run
         run_config = SimulationConfig(
             target_length_nm=100.0,
-            angle_deg=angle,
-            box_dim_x=2464,
-            box_dim_y=2464,
-            box_dim_z=2464,
+            angle_deg=angle, # Unit degrees, can be any float value
+            box_dim_x=3000,  # Unit nm, will be adjusted to BVD units in the generator
+            box_dim_y=3000,  # Unit nm, will be adjusted to BVD units in the generator
+            box_dim_z=3000,  # Unit nm, will be adjusted to BVD units in the generator
         )
         
         # Override specific ContCu variables if needed
